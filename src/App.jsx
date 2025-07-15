@@ -9,6 +9,9 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import SoulGuidePage from './pages/SoulGuidePage';
 import PracticesPage from './pages/PracticesPage';
+import WisdomPage from './pages/WisdomPage';
+import InsightsPage from './pages/InsightsPage';
+import ConnectPage from './pages/ConnectPage';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/soul-guide" element={<SoulGuidePage />} />
           <Route path="/practices" element={<PracticesPage />} />
+          <Route path="/wisdom" element={<WisdomPage />} />
+          <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/connect" element={<ConnectPage />} />
         </Route>
       </Routes>
     </Router>

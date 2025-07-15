@@ -13,6 +13,30 @@
   background-color: #ddd6fe;
 }
 
+.bg-sky-50 {
+  background-color: #f0f9ff;
+}
+
+.bg-sky-100 {
+  background-color: #e0f2fe;
+}
+
+.text-sky-600 {
+  color: #0284c7;
+}
+
+.text-sky-800 {
+  color: #075985;
+}
+
+.bg-sky-600 {
+  background-color: #0284c7;
+}
+
+.bg-sky-700 {
+  background-color: #0369a1;
+}
+
 /* Animation utilities */
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -27,7 +51,37 @@
   }
 }
 
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom border gradients */
+.border-gradient {
+  position: relative;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 /* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
 *:focus-visible {
   outline: 2px solid #38bdf8;
   outline-offset: 2px;

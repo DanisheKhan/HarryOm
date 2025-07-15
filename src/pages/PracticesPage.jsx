@@ -10,7 +10,7 @@ const PracticesPage = () => {
       title: "Digital Fasting",
       icon: "phone",
       description: "Creating intentional breaks from technology to restore mental clarity and inner peace.",
-      image: "/HarmeetImages/img8.webp",
+      image: "/HarmeetImages/img8.JPG",
       content: `
         <p class="mb-4">Digital fasting is not about rejecting technology, but creating a mindful relationship with it. Regular breaks from screens help reset your nervous system and reconnect with the physical world.</p>
         
@@ -42,7 +42,7 @@ const PracticesPage = () => {
       title: "Sacred Mornings",
       icon: "sun",
       description: "Transforming the first hour of your day into a ritual that sets a positive tone for everything that follows.",
-      image: "/HarmeetImages/img11.webp",
+      image: "/HarmeetImages/img11.JPG",
       content: `
         <p class="mb-4">How you begin your day shapes your mental and emotional state. The Sacred Morning ritual helps you start each day with intention rather than reaction, creating a foundation of calm awareness.</p>
         
@@ -76,7 +76,7 @@ const PracticesPage = () => {
       title: "Breathwork",
       icon: "wind",
       description: "Using your breath as a tool for emotional regulation, energy management, and spiritual connection.",
-      image: "/HarmeetImages/img14.webp",
+      image: "/HarmeetImages/img14.JPG",
       content: `
         <p class="mb-4">Your breath is the bridge between your conscious and unconscious mind. Through intentional breathing practices, you can shift your nervous system state, release stored emotions, and access deeper levels of awareness.</p>
         
@@ -109,7 +109,7 @@ const PracticesPage = () => {
       title: "Visualization",
       icon: "eye",
       description: "Using the power of your imagination to manifest positive outcomes and reduce anxiety about the future.",
-      image: "/HarmeetImages/img17.webp",
+      image: "/HarmeetImages/img17.JPG",
       content: `
         <p class="mb-4">Visualization harnesses your mind's creative power to shape your reality. By regularly visualizing positive outcomes and desired states of being, you rewire neural pathways and align your subconscious with your conscious goals.</p>
         
@@ -143,7 +143,7 @@ const PracticesPage = () => {
       title: "Energy Check-Ins",
       icon: "zap",
       description: "Regular awareness pauses throughout the day to assess and adjust your mental, emotional and physical state.",
-      image: "/HarmeetImages/img4.jpg",
+      image: "/HarmeetImages/img4.JPG",
       content: `
         <p class="mb-4">Energy Check-Ins are brief moments of self-awareness scattered throughout your day. They help you notice patterns, prevent energy depletion, and make conscious adjustments to maintain balance.</p>
         
@@ -178,7 +178,7 @@ const PracticesPage = () => {
       title: "Sacred Sound",
       icon: "music",
       description: "Using music, mantras, and vibration to heal the nervous system and access higher states of consciousness.",
-      image: "/HarmeetImages/img18.png",
+      image: "/HarmeetImages/img18.JPG",
       content: `
         <p class="mb-4">Sound is one of the most direct pathways to altered states of consciousness. Sacred Sound practices use specific frequencies, rhythms, and vibrations to shift brain waves, release stuck emotions, and create harmony in the body-mind system.</p>
         
@@ -268,7 +268,7 @@ const PracticesPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img6.jpg"
+            src="/HarmeetImages/img6.JPG"
             alt="Soul Practices"
             className="w-full h-full object-cover"
           />
@@ -384,7 +384,7 @@ const PracticesPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
             <img
-              src="/HarmeetImages/img19.png"
+              src="/HarmeetImages/img19.JPG"
               alt="Community Practice"
               className="w-full h-auto rounded-lg shadow-lg"
             />

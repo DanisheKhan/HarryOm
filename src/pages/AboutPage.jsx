@@ -16,7 +16,7 @@ const AboutPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img1.jpg"
+            src="/HarmeetImages/img1.JPG"
             alt="Harmeet Singh Chandhoke"
             className="w-full h-full object-cover object-center"
           />
@@ -51,7 +51,7 @@ const AboutPage = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="w-full md:w-1/3">
               <img
-                src="/HarmeetImages/img3.jpg"
+                src="/HarmeetImages/img3.JPG"
                 alt="Harmeet Singh Chandhoke Portrait"
                 className="w-full h-auto rounded-lg shadow-lg mb-8"
               />

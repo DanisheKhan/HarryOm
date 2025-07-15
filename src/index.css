@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+:root {
+  --color-primary: 200 70% 50%;
+  --color-primary-dark: 200 70% 40%;
+  --color-secondary: 260 50% 60%;
+  --color-accent: 45 90% 70%;
+  --color-light: 0 0% 98%;
+  --color-dark: 220 20% 10%;
+  --color-gray: 220 10% 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #2563eb, #9333ea);
+}
+
+.bg-blur {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hover-lift {
+  transition: all 0.3s;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s;
+}
+.card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}

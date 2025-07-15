@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/music-icon.svg" alt="Harry Om Logo" className="w-8 h-8" />
+            <img src="/HarryOmLogo.png" alt="Harry Om Logo" className="w-8 h-8" />
             <span className="text-2xl font-semibold font-[Playfair_Display]">Harry Om</span>
           </Link>
           <p className="mt-4 text-gray-600">

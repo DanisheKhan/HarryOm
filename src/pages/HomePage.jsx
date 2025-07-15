@@ -17,7 +17,7 @@ const HomePage = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img5.jpg"
+            src="/HarmeetImages/img5.JPG"
             alt="Peaceful meditation background"
             className="w-full h-full object-cover"
           />
@@ -66,7 +66,7 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
               <img
-                src="/HarmeetImages/img2.jpg"
+                src="/HarmeetImages/img19.JPG"
                 alt="Harmeet Singh Chandhoke"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -179,7 +179,7 @@ const HomePage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/HarmeetImages/img8.webp"
+                src="/HarmeetImages/img8.JPG"
                 alt="Digital Fasting"
                 className="w-full h-48 object-cover"
               />
@@ -197,7 +197,7 @@ const HomePage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/HarmeetImages/img11.webp"
+                src="/HarmeetImages/img11.JPG"
                 alt="Sacred Mornings"
                 className="w-full h-48 object-cover"
               />
@@ -215,7 +215,7 @@ const HomePage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/HarmeetImages/img14.webp"
+                src="/HarmeetImages/img14.JPG"
                 alt="Breathwork"
                 className="w-full h-48 object-cover"
               />
