@@ -1,0 +1,34 @@
+/* Custom CSS beyond Tailwind */
+
+/* Custom colors */
+.bg-lavender-50 {
+  background-color: #f5f3ff;
+}
+
+.bg-lavender-100 {
+  background-color: #ede9fe;
+}
+
+.bg-lavender-200 {
+  background-color: #ddd6fe;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
