@@ -91,7 +91,7 @@ const WisdomDropsPage = () => {
       id: 8,
       title: 'Ocean Soundscape for Focus',
       description: 'Ambient ocean sounds designed to enhance concentration and creative work.',
-      image: '/HarmeetImages/img7.JPG',
+      image: '    image: "/HarmeetImages/img7.jpg",',
       type: 'music',
       duration: '45:00',
       link: 'https://spotify.com'
@@ -100,7 +100,7 @@ const WisdomDropsPage = () => {
       id: 9,
       title: 'Finding Purpose in Chaos',
       description: 'Harry Om discusses how to discover your deeper calling amidst the noise of modern life.',
-      image: '/HarmeetImages/img3.JPG',
+      image: "/HarmeetImages/img3.jpg",
       type: 'audio',
       duration: '32:15',
       link: 'https://spotify.com'
@@ -167,7 +167,7 @@ const WisdomDropsPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img190.JPG"
+            src="/HarmeetImages/img19.JPG"
             alt="Wisdom Drops"
             className="w-full h-full object-cover object-center"
           />
@@ -378,7 +378,7 @@ const WisdomDropsPage = () => {
 
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <img
-                src="/HarmeetImages/img191.JPG"
+                src="/HarmeetImages/img19.JPG"
                 alt="Featured Collection"
                 className="w-full h-auto rounded-2xl shadow-xl"
               />

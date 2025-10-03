@@ -3,6 +3,7 @@ import './App.css';
 
 // Layouts
 import MainLayout from './layouts/MainLayout';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -16,6 +17,7 @@ import ConnectPage from './pages/ConnectPage';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />

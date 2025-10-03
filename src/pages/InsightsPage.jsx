@@ -221,7 +221,7 @@ const InsightsPage = () => {
 
           <div className="flex items-center justify-center">
             <img
-              src="/HarmeetImages/img1.JPG"
+              src="/HarmeetImages/img1.jpg"
               alt="Harry Om"
               className="w-14 h-14 rounded-full object-cover mr-4"
             />

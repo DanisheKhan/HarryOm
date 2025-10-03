@@ -283,7 +283,7 @@ const ConnectPage = () => {
             >
               <div className="relative h-52 overflow-hidden">
                 <img
-                  src="/HarmeetImages/img6.JPG"
+                  src="/HarmeetImages/img6.jpg"
                   alt="Sacred Relationships Retreat"
                   className="w-full h-full object-cover"
                 />

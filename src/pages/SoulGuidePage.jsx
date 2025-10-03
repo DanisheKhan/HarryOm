@@ -29,7 +29,7 @@ const SoulGuidePage = () => {
     },
     {
       title: "Sacred Love",
-      image: "/HarmeetImages/img10.ARW",
+      image: "/HarmeetImages/img10.JPG",
       description: "Explore the true meaning of love beyond romantic relationships. Learn how to cultivate self-love, create authentic connections with others, and extend compassion to all beings through daily practices and mindset shifts.",
       keyPoints: [
         "The foundation of self-acceptance",
@@ -66,7 +66,7 @@ const SoulGuidePage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img7.JPG"
+            src="/HarmeetImages/img7.jpg"
             alt="Soul Guide Book"
             className="w-full h-full object-cover"
           />

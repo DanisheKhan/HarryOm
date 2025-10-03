@@ -17,7 +17,7 @@ const HomePage = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img5.JPG"
+            src="/HarmeetImages/img5.jpg"
             alt="Peaceful meditation background"
             className="w-full h-full object-cover"
           />

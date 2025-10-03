@@ -143,7 +143,7 @@ const PracticesPage = () => {
       title: "Energy Check-Ins",
       icon: "zap",
       description: "Regular awareness pauses throughout the day to assess and adjust your mental, emotional and physical state.",
-      image: "/HarmeetImages/img4.JPG",
+      image: "/HarmeetImages/img4.jpg",
       content: `
         <p class="mb-4">Energy Check-Ins are brief moments of self-awareness scattered throughout your day. They help you notice patterns, prevent energy depletion, and make conscious adjustments to maintain balance.</p>
         
@@ -268,7 +268,7 @@ const PracticesPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/HarmeetImages/img6.JPG"
+            src="/HarmeetImages/img6.jpg"
             alt="Soul Practices"
             className="w-full h-full object-cover"
           />
