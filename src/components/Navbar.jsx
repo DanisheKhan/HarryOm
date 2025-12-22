@@ -10,6 +10,7 @@ const navigationLinks = [
   { path: '/practices', label: 'Practices' },
   { path: '/wisdom', label: 'Wisdom Drops' },
   { path: '/insights', label: 'Insights' },
+  { path: '/quotes', label: 'Quotes' },
 ];
 
 // Reusable NavLink component for desktop navigation

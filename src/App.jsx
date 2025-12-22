@@ -13,6 +13,7 @@ import PracticesPage from './pages/PracticesPage';
 import WisdomPage from './pages/WisdomPage';
 import InsightsPage from './pages/InsightsPage';
 import ConnectPage from './pages/ConnectPage';
+import QuotesPage from './pages/QuotesPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/wisdom" element={<WisdomPage />} />
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/connect" element={<ConnectPage />} />
+          <Route path="/quotes" element={<QuotesPage />} />
         </Route>
       </Routes>
     </Router>
