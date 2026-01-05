@@ -40,7 +40,7 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Connect</h3>
           <ul className="space-y-2">
             <li><Link to="/contact" className="text-gray-600 hover:text-sky-500 transition-colors">Contact</Link></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-500 transition-colors">Instagram</a></li>
+            <li><a href="https://www.instagram.com/harryomofficial?igsh=bDk1dmN4ZG41cHRs" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-500 transition-colors">Instagram</a></li>
             <li><a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-500 transition-colors">YouTube</a></li>
             <li><a href="https://spotify.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-500 transition-colors">Spotify</a></li>
           </ul>
