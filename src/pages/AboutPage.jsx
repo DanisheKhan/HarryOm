@@ -282,49 +282,55 @@ const AboutPage = () => {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>,
                 title: "Authenticity",
                 description: "We believe in being true to oneself and expressing genuine emotions, thoughts, and beliefs.",
-                gradient: "from-sky-400 to-cyan-500"
+                gradient: "from-sky-400 to-blue-400",
+                bgColor: "bg-sky-100"
               },
               {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>,
                 title: "Balance",
                 description: "Finding harmony between traditional wisdom and modern life, technology and nature, work and rest.",
-                gradient: "from-amber-400 to-orange-500"
+                gradient: "from-orange-400 to-orange-500",
+                bgColor: "bg-orange-100"
               },
               {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" /></svg>,
                 title: "Mindfulness",
                 description: "Cultivating present-moment awareness and intentionality in our actions and choices.",
-                gradient: "from-emerald-400 to-teal-500"
+                gradient: "from-green-400 to-emerald-500",
+                bgColor: "bg-green-100"
               },
               {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" /></svg>,
                 title: "Compassion",
                 description: "Approaching ourselves and others with kindness, understanding, and empathy.",
-                gradient: "from-rose-400 to-pink-500"
+                gradient: "from-sky-400 to-blue-400",
+                bgColor: "bg-sky-100"
               },
               {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" /></svg>,
                 title: "Growth",
                 description: "Embracing continuous learning, evolution, and transformation throughout life's journey.",
-                gradient: "from-purple-400 to-violet-500"
+                gradient: "from-purple-400 to-purple-500",
+                bgColor: "bg-purple-100"
               },
               {
                 icon: <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" /></svg>,
                 title: "Inclusivity",
                 description: "Welcoming people of all backgrounds, beliefs, and experiences on their spiritual journey.",
-                gradient: "from-indigo-400 to-blue-500"
+                gradient: "from-green-400 to-emerald-500",
+                bgColor: "bg-green-100"
               }
             ].map((value, index) => (
               <motion.div
                 key={index}
-                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                className={`group ${value.bgColor.replace('100', '50')} p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <div className={`w-16 h-16 ${value.bgColor} rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300`}>
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">{value.title}</h3>

@@ -278,14 +278,14 @@ const SoulGuidePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <motion.div
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-sky-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-sky-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
+                <div className="w-14 h-14 bg-sky-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
                   A
                 </div>
                 <div className="ml-4">
@@ -301,14 +301,14 @@ const SoulGuidePage = () => {
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-purple-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-purple-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
+                <div className="w-14 h-14 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
                   R
                 </div>
                 <div className="ml-4">
@@ -324,14 +324,14 @@ const SoulGuidePage = () => {
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-orange-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-orange-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
+                <div className="w-14 h-14 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
                   M
                 </div>
                 <div className="ml-4">

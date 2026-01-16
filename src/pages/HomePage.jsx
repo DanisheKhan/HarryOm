@@ -188,31 +188,37 @@ const HomePage = () => {
                 icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" /></svg>,
                 title: "Mind as a Supercomputer",
                 description: "Understand how your mind processes information and learn techniques to optimize its performance.",
-                color: "from-purple-400 to-purple-600"
+                color: "from-purple-400 to-purple-500",
+                bgColor: "bg-purple-50",
+                iconBg: "bg-purple-100"
               },
               {
                 icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" /></svg>,
                 title: "Sacred Love",
                 description: "Discover the deeper meaning of love beyond romantic attachments and learn to cultivate it in all relationships.",
-                color: "from-sky-400 to-sky-600"
+                color: "from-sky-400 to-blue-400",
+                bgColor: "bg-sky-50",
+                iconBg: "bg-sky-100"
               },
               {
                 icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>,
                 title: "Gen Z Spirituality",
                 description: "Bridging ancient spiritual wisdom with modern digital challenges faced by today's youth.",
-                color: "from-yellow-400 to-orange-500"
+                color: "from-orange-400 to-orange-500",
+                bgColor: "bg-orange-50",
+                iconBg: "bg-orange-100"
               }
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                className={`group ${item.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className={`w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 ${item.iconBg} rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300`}>
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">{item.title}</h3>
