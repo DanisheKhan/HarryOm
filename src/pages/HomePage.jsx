@@ -367,7 +367,7 @@ const HomePage = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-6 py-4 rounded-full focus:outline-none focus:ring-4 focus:ring-white/30 border-0 text-gray-900 placeholder-gray-500 shadow-lg"
+                className="flex-grow px-6 py-4 rounded-full focus:outline-none focus:ring-4 focus:ring-white/30 border-0 text-gray-900 placeholder-white/70 shadow-lg"
                 required
               />
               <button
