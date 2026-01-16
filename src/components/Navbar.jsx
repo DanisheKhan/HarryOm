@@ -25,8 +25,8 @@ const NavLink = ({ to, children, className = '' }) => {
     <Link
       to={to}
       className={`relative transition-all duration-300 group ${isActive
-          ? 'text-sky-600 font-semibold'
-          : 'text-gray-700 hover:text-sky-600'
+        ? 'text-sky-600 font-semibold'
+        : 'text-gray-700 hover:text-sky-600'
         } ${className}`}
       onClick={handleClick}
     >
@@ -51,8 +51,8 @@ const MobileNavLink = ({ to, onClick, children }) => {
     <Link
       to={to}
       className={`py-3 px-4 rounded-xl transition-all duration-300 ${isActive
-          ? 'bg-gradient-to-r from-sky-50 to-purple-50 text-sky-600 font-semibold shadow-sm'
-          : 'text-gray-700 hover:bg-gray-50 hover:text-sky-600'
+        ? 'bg-gradient-to-r from-sky-50 to-purple-50 text-sky-600 font-semibold shadow-sm'
+        : 'text-gray-700 hover:bg-gray-50 hover:text-sky-600'
         }`}
       onClick={handleClick}
     >
