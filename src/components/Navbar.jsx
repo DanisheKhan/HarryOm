@@ -8,7 +8,6 @@ const navigationLinks = [
   { path: '/about', label: 'About' },
   { path: '/soul-guide', label: 'Soul Guide' },
   { path: '/practices', label: 'Practices' },
-  { path: '/wisdom', label: 'Wisdom Drops' },
   { path: '/insights', label: 'Insights' },
   { path: '/quotes', label: 'Quotes' },
 ];
@@ -25,10 +24,15 @@ const NavLink = ({ to, children, className = '' }) => {
   return (
     <Link
       to={to}
-      className={`transition-colors ${isActive ? 'text-sky-600 font-medium border-b-2 border-sky-500' : 'text-gray-800 hover:text-sky-500'} ${className}`}
+      className={`relative transition-all duration-300 group ${isActive
+          ? 'text-sky-600 font-semibold'
+          : 'text-gray-700 hover:text-sky-600'
+        } ${className}`}
       onClick={handleClick}
     >
       {children}
+      <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-sky-500 to-purple-500 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+        }`}></span>
     </Link>
   );
 };
@@ -46,7 +50,10 @@ const MobileNavLink = ({ to, onClick, children }) => {
   return (
     <Link
       to={to}
-      className={`py-2 transition-colors ${isActive ? 'text-sky-600 font-medium' : 'text-gray-800 hover:text-sky-500'}`}
+      className={`py-3 px-4 rounded-xl transition-all duration-300 ${isActive
+          ? 'bg-gradient-to-r from-sky-50 to-purple-50 text-sky-600 font-semibold shadow-sm'
+          : 'text-gray-700 hover:bg-gray-50 hover:text-sky-600'
+        }`}
       onClick={handleClick}
     >
       {children}
@@ -61,16 +68,21 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="py-6 px-4 md:px-8 w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50">
+    <nav className="py-5 px-4 md:px-8 w-full bg-white/95 backdrop-blur-lg fixed top-0 z-50 shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-3 group"
           onClick={() => window.scrollTo(0, 0)}
         >
-          <img src="/HarryOmLogo.png" alt="Harry Om Logo" className="w-8 h-8" />
-          <span className="text-2xl font-semibold font-[Playfair_Display]">Harry Om</span>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-purple-400 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+            <img src="/HarryOmLogo.png" alt="Harry Om Logo" className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <span className="text-2xl font-bold font-[Playfair_Display] bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent">
+            Harry Om
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -78,7 +90,10 @@ const Navbar = () => {
           {navigationLinks.map(link => (
             <NavLink key={link.path} to={link.path}>{link.label}</NavLink>
           ))}
-          <NavLink to="/connect" className="bg-sky-100 hover:bg-sky-200 text-sky-800 py-2 px-4 rounded-full">
+          <NavLink
+            to="/connect"
+            className="!bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 !text-white py-2.5 px-6 rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+          >
             Connect
           </NavLink>
         </div>
@@ -87,7 +102,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-800 focus:outline-none"
+            className="text-gray-800 focus:outline-none hover:text-sky-600 transition-colors p-2 rounded-lg hover:bg-sky-50"
             aria-expanded={isOpen}
             aria-label="Toggle navigation menu"
           >
@@ -111,10 +126,10 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden mt-4 bg-white rounded-lg shadow-lg py-4"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden mt-4 bg-white rounded-2xl shadow-xl py-4 border border-gray-100 overflow-hidden"
           >
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-2 px-4">
               {navigationLinks.map(link => (
                 <MobileNavLink key={link.path} to={link.path} onClick={closeMenu}>
                   {link.label}
@@ -122,7 +137,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/connect"
-                className="bg-sky-100 hover:bg-sky-200 text-sky-800 py-2 px-4 rounded-full transition-colors inline-block w-fit"
+                className="bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 inline-block text-center shadow-md hover:shadow-lg transform hover:scale-[1.02] mt-2"
                 onClick={() => {
                   window.scrollTo(0, 0);
                   closeMenu();

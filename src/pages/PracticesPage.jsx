@@ -262,55 +262,73 @@ const PracticesPage = () => {
     }
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" }
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/HarmeetImages/img6.jpg"
-            alt="Soul Practices"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-900/80 via-purple-900/70 to-pink-900/60"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/20">
+              🧘 Daily Spiritual Practices
+            </span>
+          </motion.div>
+
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 font-[Playfair_Display]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-[Playfair_Display] leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
           >
-            Practices & Rituals
+            Daily Soul Practices
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             transition={{ delay: 0.2 }}
           >
-            Daily soul practices to nurture your inner peace and create harmony in the digital age
+            Transform your daily routine with ancient wisdom for modern living
           </motion.p>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-6 text-gray-900">
+          <span className="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold mb-6">
+            ✨ Getting Started
+          </span>
+          <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-6 text-gray-900">
             Modern Rituals for Inner Peace
           </h2>
 
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             In the rush of modern life, intentional practices are more important than ever. These rituals
             are designed to fit seamlessly into your day, helping you create moments of presence and
             peace without requiring hours of time or special equipment.
           </p>
 
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-700 leading-relaxed">
             Explore each practice by clicking on the cards below. Start with just one that resonates with
             you and gradually incorporate others as they feel right for your journey.
           </p>
@@ -318,42 +336,45 @@ const PracticesPage = () => {
       </section>
 
       {/* Practices Grid */}
-      <section className="py-12 px-4 md:px-8 bg-gray-50">
+      <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-sky-50/30 via-white to-lavender-50/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {practices.map((practice) => (
+            {practices.map((practice, index) => (
               <motion.div
                 key={practice.id}
-                className={`bg-white rounded-xl overflow-hidden shadow-md transition-shadow ${expandedPractice === practice.id ? 'shadow-xl ring-2 ring-sky-400' : 'hover:shadow-lg'
+                className={`group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 border ${expandedPractice === practice.id ? 'ring-4 ring-sky-400/50 border-sky-400' : 'border-gray-100'
                   }`}
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
                 onClick={() => setExpandedPractice(expandedPractice === practice.id ? null : practice.id)}
               >
-                <img
-                  src={practice.image}
-                  alt={practice.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 mr-4">
-                      {getIcon(practice.icon)}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{practice.title}</h3>
+                <div className="relative overflow-hidden h-52">
+                  <img
+                    src={practice.image}
+                    alt={practice.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute top-4 right-4 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                    {getIcon(practice.icon)}
                   </div>
+                </div>
+                <div className="p-7">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">{practice.title}</h3>
 
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-600 mb-5 leading-relaxed">
                     {practice.description}
                   </p>
 
                   <button
-                    className="text-sky-600 hover:text-sky-800 font-medium inline-flex items-center"
+                    className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition-colors group"
                   >
-                    <span>{expandedPractice === practice.id ? 'Close Details' : 'Learn More'}</span>
+                    <span>{expandedPractice === practice.id ? 'Show Less' : 'Learn More'}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-5 w-5 ml-1 transition-transform ${expandedPractice === practice.id ? 'rotate-180' : ''}`}
+                      className={`h-5 w-5 transition-transform duration-300 ${expandedPractice === practice.id ? 'rotate-180' : ''}`}
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -367,9 +388,10 @@ const PracticesPage = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-6 pt-6 border-t border-gray-200"
+                      transition={{ duration: 0.4 }}
+                      className="mt-7 pt-7 border-t border-gray-100"
                     >
-                      <div dangerouslySetInnerHTML={{ __html: practice.content }} />
+                      <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: practice.content }} />
                     </motion.div>
                   )}
                 </div>
@@ -380,96 +402,138 @@ const PracticesPage = () => {
       </section>
 
       {/* Community Practice */}
-      <section className="py-20 px-4 md:px-8 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2">
-            <img
-              src="/HarmeetImages/img19.JPG"
-              alt="Community Practice"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
+      <section className="py-24 px-4 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <motion.div
+            className="w-full md:w-1/2"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-purple-400 rounded-3xl blur-2xl opacity-20"></div>
+              <img
+                src="/HarmeetImages/img19.JPG"
+                alt="Community Practice"
+                className="relative w-full h-auto rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+          </motion.div>
 
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-6 text-gray-900">
+          <motion.div
+            className="w-full md:w-1/2"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
+              🌐 Community
+            </span>
+            <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-6 text-gray-900">
               Join Our Practice Community
             </h2>
 
-            <p className="text-gray-700 mb-6 text-lg">
+            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
               While individual practice forms the foundation of spiritual growth, practicing in community
               amplifies the experience and provides support on your journey.
             </p>
 
-            <p className="text-gray-700 mb-8 text-lg">
+            <p className="text-gray-700 mb-10 text-lg leading-relaxed">
               Harry Om hosts weekly virtual practice sessions where you can join others in guided breathwork,
               meditation, and discussions about integrating these practices into daily life.
             </p>
 
-            <div className="bg-lavender-50 rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Upcoming Sessions</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-sky-600 mr-2">•</span>
+            <div className="bg-gradient-to-br from-lavender-50 to-sky-50 rounded-3xl p-8 shadow-lg border border-purple-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Upcoming Sessions</h3>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start group">
+                  <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
                   <div>
-                    <p className="font-semibold">Digital Detox Workshop</p>
+                    <p className="font-semibold text-gray-900">Digital Detox Workshop</p>
                     <p className="text-sm text-gray-600">Saturday, July 20 • 10:00 AM</p>
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-sky-600 mr-2">•</span>
+                <li className="flex items-start group">
+                  <span className="text-purple-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
                   <div>
-                    <p className="font-semibold">Group Breathwork Session</p>
+                    <p className="font-semibold text-gray-900">Group Breathwork Session</p>
                     <p className="text-sm text-gray-600">Tuesday, July 23 • 7:00 PM</p>
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-sky-600 mr-2">•</span>
+                <li className="flex items-start group">
+                  <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
                   <div>
-                    <p className="font-semibold">Sacred Morning Challenge Kickoff</p>
+                    <p className="font-semibold text-gray-900">Sacred Morning Challenge Kickoff</p>
                     <p className="text-sm text-gray-600">Monday, July 29 • 6:30 AM</p>
                   </div>
                 </li>
               </ul>
 
               <button
-                className="mt-6 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-full py-2 px-6 transition-colors shadow-md"
+                className="w-full bg-gradient-to-r from-sky-500 to-purple-500 hover:from-sky-600 hover:to-purple-600 text-white font-bold rounded-full py-4 px-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] transform"
               >
                 Register for Sessions
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 px-4 md:px-8 bg-gradient-to-r from-sky-100 to-lavender-100">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-6 text-gray-900">
-            Receive Daily Practice Reminders
-          </h2>
+      <section className="py-24 px-4 md:px-8 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-400/30 rounded-full blur-3xl"></div>
 
-          <p className="text-lg text-gray-700 mb-8">
-            Subscribe to receive gentle daily reminders, practice tips, and inspiration to support your spiritual journey.
-          </p>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-8 border border-white/30">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </div>
 
-          <form className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 border border-gray-300"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-full py-3 px-6 transition-colors shadow-md whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
+            <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-6 text-white">
+              Receive Daily Practice Reminders
+            </h2>
 
-          <p className="text-sm text-gray-600 mt-4">
-            Daily practice reminders delivered with love. Unsubscribe at any time.
-          </p>
+            <p className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Subscribe to receive gentle daily reminders, practice tips, and inspiration to support your spiritual journey.
+            </p>
+
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-grow px-6 py-4 rounded-full focus:outline-none focus:ring-4 focus:ring-white/30 border-0 text-gray-900 placeholder-gray-500 shadow-lg"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-white hover:bg-gray-100 text-sky-600 font-bold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+
+            <p className="text-sm text-white/80">
+              🔒 Daily practice reminders delivered with love. Unsubscribe at any time.
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>

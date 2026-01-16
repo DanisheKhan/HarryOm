@@ -73,7 +73,7 @@ const QuotesPage = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.08
       }
     }
   };
@@ -84,34 +84,43 @@ const QuotesPage = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1]
       }
     }
+  };
+
+  const categoryColors = {
+    Perspective: "from-sky-400 to-cyan-500",
+    Divinity: "from-purple-400 to-pink-500",
+    Meditation: "from-indigo-400 to-purple-500",
+    Knowledge: "from-amber-400 to-orange-500",
+    Life: "from-emerald-400 to-teal-500",
+    Seeking: "from-rose-400 to-pink-500",
+    Love: "from-pink-400 to-rose-500",
+    Devotion: "from-violet-400 to-purple-500",
+    Consciousness: "from-blue-400 to-indigo-500",
+    Mind: "from-cyan-400 to-sky-500",
+    Yoga: "from-teal-400 to-emerald-500"
   };
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-sky-50 via-white to-lavender-50">
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/HarmeetImages/img5.jpg"
-            alt="Spiritual wisdom background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-sky-900/80 to-purple-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-900/85 via-purple-900/75 to-pink-900/70"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <motion.div
-            className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <svg
-              className="w-8 h-8 text-white"
+              className="w-10 h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -121,7 +130,7 @@ const QuotesPage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-4 font-[Playfair_Display]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-[Playfair_Display]"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -130,7 +139,7 @@ const QuotesPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl text-white/90 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -142,34 +151,55 @@ const QuotesPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 px-4 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-sky-600">{quotes.length}</p>
-              <p className="text-gray-600 text-sm md:text-base mt-1">Quotes</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-purple-600">∞</p>
-              <p className="text-gray-600 text-sm md:text-base mt-1">Wisdom</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-sky-600">1</p>
-              <p className="text-gray-600 text-sm md:text-base mt-1">Truth</p>
-            </div>
+      <section className="py-12 px-4 bg-white/80 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 gap-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="group"
+            >
+              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
+                {quotes.length}
+              </p>
+              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Quotes</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="group"
+            >
+              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+                ∞
+              </p>
+              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Wisdom</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="group"
+            >
+              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-purple-600 bg-clip-text text-transparent">
+                1
+              </p>
+              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Truth</p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Quotes Section */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
           >
             {quotes.map((quote, index) => (
               <motion.div
@@ -177,32 +207,41 @@ const QuotesPage = () => {
                 variants={quoteVariants}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group ${hoveredIndex === index ? 'scale-[1.02]' : ''
+                className={`relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group ${hoveredIndex === index ? 'scale-[1.03] -translate-y-2' : ''
                   }`}
               >
-                {/* Gradient border effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-sky-400 via-purple-400 to-sky-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ padding: '2px' }}>
-                  <div className="w-full h-full bg-white rounded-2xl"></div>
+                {/* Animated gradient border */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-400 to-purple-500"} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`} style={{ padding: '3px' }}>
+                  <div className="w-full h-full bg-white rounded-3xl"></div>
                 </div>
 
                 {/* Content */}
                 <div className="relative p-8 md:p-10">
                   {/* Category badge */}
-                  <div className="mb-6">
-                    <span className="inline-block px-4 py-1.5 bg-sky-50 text-sky-700 rounded-full text-sm font-medium">
-                      {quote.category}
+                  <div className="mb-7">
+                    <span className={`inline-block px-5 py-2 bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-100 to-purple-100"} bg-opacity-20 rounded-full text-sm font-semibold shadow-sm`}>
+                      <span className={`bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-600 to-purple-600"} bg-clip-text text-transparent`}>
+                        {quote.category}
+                      </span>
                     </span>
                   </div>
 
+                  {/* Quote icon */}
+                  <div className="absolute top-8 right-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                    <svg className="w-16 h-16 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
+
                   {/* Quote text */}
-                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-[Lora]">
-                    ❝ {quote.text} ❞
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-[Lora] mb-8 relative z-10">
+                    {quote.text}
                   </p>
 
                   {/* Bottom decoration */}
-                  <div className="mt-6 flex items-center gap-2">
-                    <div className="h-0.5 w-12 bg-gradient-to-r from-sky-400 to-purple-400"></div>
-                    <span className="text-xs text-gray-400 font-medium">HARRY OM</span>
+                  <div className="flex items-center gap-3">
+                    <div className={`h-1 w-16 bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-400 to-purple-400"} rounded-full`}></div>
+                    <span className="text-xs text-gray-500 font-bold tracking-wider">HARRY OM</span>
                   </div>
                 </div>
               </motion.div>
@@ -212,10 +251,11 @@ const QuotesPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-br from-sky-600 via-sky-500 to-purple-600 relative overflow-hidden">
+      <section className="py-24 px-4 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-pink-400/15 rounded-full blur-3xl"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -224,25 +264,31 @@ const QuotesPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-[Playfair_Display]">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-8 border border-white/30">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-[Playfair_Display]">
               Let Wisdom Guide Your Path
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
               Explore more insights, practices, and teachings for your spiritual growth
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-5 justify-center">
               <a
                 href="/practices"
-                className="bg-white hover:bg-gray-100 text-sky-700 font-medium rounded-full py-3 px-8 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-white hover:bg-gray-100 text-sky-700 font-bold rounded-full py-4 px-9 transition-all duration-300 shadow-2xl hover:shadow-xl hover:scale-105 transform"
               >
                 Explore Practices
               </a>
               <a
-                href="/wisdom"
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 font-medium rounded-full py-3 px-8 transition-all duration-300"
+                href="/insights"
+                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold rounded-full py-4 px-9 transition-all duration-300 border-2 border-white/40 hover:border-white/60 hover:scale-105 transform"
               >
-                Wisdom Drops
+                Read Insights
               </a>
             </div>
           </motion.div>

@@ -164,13 +164,8 @@ const WisdomDropsPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/HarmeetImages/img19.JPG"
-            alt="Wisdom Drops"
-            className="w-full h-full object-cover object-center"
-          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
         </div>
 

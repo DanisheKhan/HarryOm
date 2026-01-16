@@ -10,22 +10,37 @@ const AboutPage = () => {
     }
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" }
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/HarmeetImages/img1.jpg"
-            alt="Harmeet Singh Chandhoke"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-purple-900/50"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/20">
+              ✨ Spiritual Guide & Mentor
+            </span>
+          </motion.div>
+
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 font-[Playfair_Display]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-[Playfair_Display] leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -34,7 +49,7 @@ const AboutPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -46,45 +61,66 @@ const AboutPage = () => {
       </section>
 
       {/* Bio Section */}
-      <section className="py-20 px-4 md:px-8 bg-white">
+      <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-start gap-12">
-            <div className="w-full md:w-1/3">
-              <img
-                src="/HarmeetImages/img3.jpg"
-                alt="Harmeet Singh Chandhoke Portrait"
-                className="w-full h-auto rounded-lg shadow-lg mb-8"
-              />
+          <div className="flex flex-col md:flex-row items-start gap-16">
+            <motion.div
+              className="w-full md:w-1/3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <div className="relative mb-10">
+                <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-purple-400 rounded-2xl blur-2xl opacity-20"></div>
+                <img
+                  src="/HarmeetImages/img3.jpg"
+                  alt="Harmeet Singh Chandhoke Portrait"
+                  className="relative w-full h-auto rounded-2xl shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
 
-              <div className="bg-sky-50 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Quick Facts</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-sky-600 mr-2">•</span>
-                    <span>Spiritual Guide & Author</span>
+              <div className="bg-gradient-to-br from-sky-50 to-purple-50 rounded-2xl p-8 shadow-lg border border-sky-100">
+                <h3 className="text-xl font-bold mb-6 text-gray-900 flex items-center gap-2">
+                  <span className="text-2xl">⚡</span> Quick Facts
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start group">
+                    <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
+                    <span className="text-gray-700">Spiritual Guide & Author</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-sky-600 mr-2">•</span>
-                    <span>Music Producer (Meet Bros)</span>
+                  <li className="flex items-start group">
+                    <span className="text-purple-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
+                    <span className="text-gray-700">Music Producer (Meet Bros)</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-sky-600 mr-2">•</span>
-                    <span>Gen Z Mental Wellbeing Advocate</span>
+                  <li className="flex items-start group">
+                    <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
+                    <span className="text-gray-700">Gen Z Mental Wellbeing Advocate</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-sky-600 mr-2">•</span>
-                    <span>Meditation & Breathwork Practitioner</span>
+                  <li className="flex items-start group">
+                    <span className="text-purple-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
+                    <span className="text-gray-700">Meditation & Breathwork Practitioner</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-sky-600 mr-2">•</span>
-                    <span>Digital Wellness Expert</span>
+                  <li className="flex items-start group">
+                    <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
+                    <span className="text-gray-700">Digital Wellness Expert</span>
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full md:w-2/3">
-              <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-8 text-gray-900">
+            <motion.div
+              className="w-full md:w-2/3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
+              <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
+                📖 His Journey
+              </span>
+              <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-8 text-gray-900 leading-tight">
                 The Journey of Harmeet Singh Chandhoke
               </h2>
 
@@ -117,149 +153,178 @@ const AboutPage = () => {
                   chaotic world.
                 </p>
 
-                <blockquote className="border-l-4 border-sky-400 pl-6 italic my-8">
-                  "My vision is to help the younger generation rediscover their inner wisdom and peace
-                  without disconnecting from the modern world. We can embrace technology while maintaining
-                  our spiritual core."
+                <blockquote className="border-l-4 border-sky-400 pl-6 italic my-10 bg-gradient-to-r from-sky-50 to-purple-50 py-6 rounded-r-xl">
+                  <p className="text-lg text-gray-800 leading-relaxed">
+                    "My vision is to help the younger generation rediscover their inner wisdom and peace
+                    without disconnecting from the modern world. We can embrace technology while maintaining
+                    our spiritual core."
+                  </p>
                 </blockquote>
 
-                <p>
+                <p className="text-gray-700 text-lg leading-relaxed">
                   Today, Harry Om divides his time between writing, speaking engagements, one-on-one
                   coaching, and creating spiritual content that resonates with younger audiences. His
                   approach is non-dogmatic, inclusive, and focused on practical spirituality for everyday life.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 px-4 md:px-8 bg-lavender-50">
+      <section className="py-24 px-4 md:px-8 bg-gradient-to-br from-lavender-50 via-white to-sky-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+              🎯 Our Purpose
+            </span>
+            <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
               Vision & Mission
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The guiding principles behind Harry Om's work
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <motion.div
+              className="group bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-sky-100"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Vision</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-5 leading-relaxed text-lg">
                 To create a world where young people can thrive spiritually while navigating the
                 complexities of the digital age, finding balance between technological advancement
                 and inner peace.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 leading-relaxed text-lg">
                 We envision a generation that uses technology mindfully, cultivates meaningful human
                 connections, and develops a strong inner foundation based on timeless spiritual principles.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <motion.div
+              className="group bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-purple-100"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Mission</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-5 leading-relaxed text-lg">
                 To provide practical spiritual guidance, tools, and resources specifically designed for
                 Generation Z and young millennials who are seeking meaning, purpose, and emotional wellbeing
                 in the digital era.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 leading-relaxed text-lg">
                 We accomplish this through accessible content, community building, and teaching practices
                 that integrate seamlessly into modern lifestyles while honoring ancient wisdom.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20 px-4 md:px-8 bg-white">
+      <section className="py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <span className="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold mb-4">
+              💎 Core Principles
+            </span>
+            <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
               Core Values
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The principles that guide our approach to spiritual guidance
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6">
-              <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Authenticity</h3>
-              <p className="text-gray-700">
-                We believe in being true to oneself and expressing genuine emotions, thoughts, and beliefs.
-              </p>
-            </div>
-
-            <div className="p-6">
-              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Balance</h3>
-              <p className="text-gray-700">
-                Finding harmony between traditional wisdom and modern life, technology and nature, work and rest.
-              </p>
-            </div>
-
-            <div className="p-6">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Mindfulness</h3>
-              <p className="text-gray-700">
-                Cultivating present-moment awareness and intentionality in our actions and choices.
-              </p>
-            </div>
-
-            <div className="p-6">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Compassion</h3>
-              <p className="text-gray-700">
-                Approaching ourselves and others with kindness, understanding, and empathy.
-              </p>
-            </div>
-
-            <div className="p-6">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Growth</h3>
-              <p className="text-gray-700">
-                Embracing continuous learning, evolution, and transformation throughout life's journey.
-              </p>
-            </div>
-
-            <div className="p-6">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Inclusivity</h3>
-              <p className="text-gray-700">
-                Welcoming people of all backgrounds, beliefs, and experiences on their spiritual journey.
-              </p>
-            </div>
+            {[
+              {
+                icon: "➕",
+                title: "Authenticity",
+                description: "We believe in being true to oneself and expressing genuine emotions, thoughts, and beliefs.",
+                gradient: "from-sky-400 to-cyan-500"
+              },
+              {
+                icon: "⚡",
+                title: "Balance",
+                description: "Finding harmony between traditional wisdom and modern life, technology and nature, work and rest.",
+                gradient: "from-amber-400 to-orange-500"
+              },
+              {
+                icon: "🧘",
+                title: "Mindfulness",
+                description: "Cultivating present-moment awareness and intentionality in our actions and choices.",
+                gradient: "from-emerald-400 to-teal-500"
+              },
+              {
+                icon: "❤️",
+                title: "Compassion",
+                description: "Approaching ourselves and others with kindness, understanding, and empathy.",
+                gradient: "from-rose-400 to-pink-500"
+              },
+              {
+                icon: "🌱",
+                title: "Growth",
+                description: "Embracing continuous learning, evolution, and transformation throughout life's journey.",
+                gradient: "from-purple-400 to-violet-500"
+              },
+              {
+                icon: "🌍",
+                title: "Inclusivity",
+                description: "Welcoming people of all backgrounds, beliefs, and experiences on their spiritual journey.",
+                gradient: "from-indigo-400 to-blue-500"
+              }
+            ].map((value, index) => (
+              <motion.div
+                key={index}
+                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${value.gradient} rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-gray-900">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

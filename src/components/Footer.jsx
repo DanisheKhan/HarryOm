@@ -51,7 +51,6 @@ const Footer = () => {
         <div className="col-span-1">
           <h3 className="font-semibold text-lg mb-4">Resources</h3>
           <ul className="space-y-2">
-            <li><Link to="/wisdom" className="text-gray-600 hover:text-sky-500 transition-colors">Wisdom Drops</Link></li>
             <li><Link to="/blog" className="text-gray-600 hover:text-sky-500 transition-colors">Blog & Insights</Link></li>
             <li><Link to="/journal" className="text-gray-600 hover:text-sky-500 transition-colors">Journal & Tools</Link></li>
             <li><Link to="/programs" className="text-gray-600 hover:text-sky-500 transition-colors">Programs & Coaching</Link></li>

@@ -1,13 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: 200 70% 50%;
-  --color-primary-dark: 200 70% 40%;
-  --color-secondary: 260 50% 60%;
-  --color-accent: 45 90% 70%;
+  /* Enhanced Color Palette */
+  --color-primary: 200 85% 55%;
+  --color-primary-dark: 200 85% 45%;
+  --color-primary-light: 200 85% 65%;
+  --color-secondary: 260 60% 65%;
+  --color-secondary-dark: 260 60% 55%;
+  --color-accent: 45 95% 72%;
+  --color-accent-dark: 45 95% 62%;
   --color-light: 0 0% 98%;
-  --color-dark: 220 20% 10%;
-  --color-gray: 220 10% 90%;
+  --color-dark: 220 25% 12%;
+  --color-gray: 220 12% 92%;
+
+  /* Gradient Colors */
+  --gradient-sky-purple: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+  --gradient-purple-pink: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  --gradient-ocean: linear-gradient(
+    135deg,
+    #06b6d4 0%,
+    #3b82f6 50%,
+    #8b5cf6 100%
+  );
+  --gradient-sunset: linear-gradient(
+    135deg,
+    #f59e0b 0%,
+    #ec4899 50%,
+    #8b5cf6 100%
+  );
+  --gradient-soft: linear-gradient(135deg, #f0f9ff 0%, #faf5ff 100%);
+
+  /* Shadow Presets */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-colored: 0 10px 30px -5px rgba(14, 165, 233, 0.3);
 }
 
 html {
@@ -17,9 +49,11 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #333;
-  background-color: #fff;
+  color: #1f2937;
+  background-color: #ffffff;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -29,35 +63,88 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
+/* Text Utilities */
 .text-balance {
   text-wrap: balance;
 }
 
 .text-gradient {
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #2563eb, #9333ea);
+  background-image: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
 }
 
+.text-gradient-sunset {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #f59e0b 0%,
+    #ec4899 50%,
+    #8b5cf6 100%
+  );
+}
+
+/* Background Effects */
 .bg-blur {
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
+.bg-glass {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effects */
 .hover-lift {
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.hover-lift-sm {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-lift-sm:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
 }
 
 .card-hover {
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-hover:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.glow-on-hover {
+  transition: all 0.3s ease;
+}
+.glow-on-hover:hover {
+  box-shadow:
+    0 0 20px rgba(14, 165, 233, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-bounce {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
