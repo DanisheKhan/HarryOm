@@ -38,43 +38,43 @@ const HomePage = () => {
             src="/HarmeetImages/img5.jpg"
             alt="Peaceful meditation background"
             className="w-full h-full object-cover object-center scale-100"
-            style={{ objectPosition: 'center 10%' }}
+            style={{ objectPosition: 'center 5%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 md:px-8 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-6 md:px-8 max-w-6xl mx-auto py-20 mt-12 md:mt-16">
           <motion.div
-            className="mb-8"
+            className="mb-10 md:mb-12"
             initial="hidden"
             animate="visible"
             variants={scaleIn}
           >
-            <span className="text-white/80 text-xs md:text-sm tracking-[0.3em] uppercase font-light">
+            <span className="text-white/75 text-[10px] md:text-xs tracking-[0.35em] uppercase font-light">
               Welcome to Your Spiritual Journey
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-8 font-[Playfair_Display] leading-[1.1] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-light text-white mb-10 md:mb-12 font-[Playfair_Display] leading-[1.15] tracking-tight px-4"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
           >
             You are not broken.
             <br />
-            <span className="italic font-normal">You are just becoming.</span>
+            <span className="italic font-normal mt-2 inline-block">You are just becoming.</span>
           </motion.h1>
 
           <motion.div
-            className="w-16 h-[1px] bg-white/40 mx-auto mb-8"
+            className="w-20 h-[1px] bg-white/50 mx-auto mb-10 md:mb-12"
             initial={{ width: 0, opacity: 0 }}
-            animate={{ width: 64, opacity: 1 }}
+            animate={{ width: 80, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           ></motion.div>
 
           <motion.p
-            className="text-base md:text-lg text-white/85 mb-14 max-w-xl mx-auto leading-relaxed font-light"
+            className="text-sm md:text-base lg:text-lg text-white/80 mb-16 md:mb-20 max-w-2xl mx-auto leading-relaxed font-light tracking-wide"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -84,7 +84,7 @@ const HomePage = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-5 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -92,37 +92,20 @@ const HomePage = () => {
           >
             <Link
               to="/about"
-              className="group relative px-10 py-3.5 text-white font-light text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 hover:tracking-widest"
+              className="group relative px-12 py-4 text-white font-light text-xs md:text-sm tracking-[0.15em] uppercase overflow-hidden transition-all duration-500 hover:tracking-[0.2em]"
             >
               <span className="relative z-10">Begin Your Journey</span>
-              <div className="absolute inset-0 border border-white/40 group-hover:border-white/60 transition-colors duration-500"></div>
+              <div className="absolute inset-0 border border-white/50 group-hover:border-white/70 transition-colors duration-500"></div>
               <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500"></div>
             </Link>
             <Link
               to="/practices"
-              className="text-white/70 hover:text-white font-light text-sm tracking-wider uppercase transition-all duration-300 underline underline-offset-8 decoration-white/30 hover:decoration-white/60"
+              className="text-white/65 hover:text-white/95 font-light text-xs md:text-sm tracking-[0.15em] uppercase transition-all duration-300 underline underline-offset-8 decoration-white/40 hover:decoration-white/70"
             >
               Explore Practices
             </Link>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-white/60 text-xs tracking-widest uppercase font-light">Scroll</span>
-            <motion.div
-              className="w-[1px] h-12 bg-gradient-to-b from-white/60 to-transparent"
-              animate={{ opacity: [0.6, 1, 0.6] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            ></motion.div>
-          </div>
-        </motion.div>
       </section>
 
       {/* About Section Preview */}
