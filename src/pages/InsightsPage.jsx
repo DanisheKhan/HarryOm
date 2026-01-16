@@ -71,9 +71,9 @@ const InsightsPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-900/85 via-purple-900/75 to-pink-900/70"></div>
+          <div className="absolute inset-0 bg-white/5"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -83,13 +83,16 @@ const InsightsPage = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/20">
-              💡 Spiritual Insights
+            <span className="inline-block px-6 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold border border-gray-200 flex items-center gap-2">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+              </svg>
+              Spiritual Insights
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-serif leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -98,7 +101,7 @@ const InsightsPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -126,7 +129,7 @@ const InsightsPage = () => {
             </h2>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+          <div className="flex flex-col md:flex-row gap-12 bg-white rounded-3xl overflow-hidden border border-gray-100">>
             <motion.div
               className="w-full md:w-1/2"
               initial={{ opacity: 0, x: -30 }}
@@ -169,7 +172,7 @@ const InsightsPage = () => {
                 {featuredInsight.content.substring(0, 300)}...
               </p>
 
-              <button className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-purple-500 hover:from-sky-600 hover:to-purple-600 text-white font-bold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+              <button className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
                 <span>Read Full Insight</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -189,8 +192,11 @@ const InsightsPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold mb-4">
-              📚 Latest Articles
+            <span className="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+              </svg>
+              Latest Articles
             </span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
               Latest Insights
@@ -251,7 +257,7 @@ const InsightsPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full mb-8">
               <svg className="w-10 h-10 text-sky-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
               </svg>
@@ -297,7 +303,7 @@ const InsightsPage = () => {
 
             <div className="flex flex-col md:flex-row items-center relative z-10">
               <div className="w-full md:w-1/2 p-10 md:p-16">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6 border border-white/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
                   </svg>
@@ -326,8 +332,11 @@ const InsightsPage = () => {
                   </button>
                 </form>
 
-                <p className="text-sm text-white/80">
-                  🔒 No spam, ever. Unsubscribe anytime.
+                <p className="text-sm text-white/80 flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                  </svg>
+                  No spam, ever. Unsubscribe anytime.
                 </p>
               </div>
 

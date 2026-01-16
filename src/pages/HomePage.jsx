@@ -39,7 +39,7 @@ const HomePage = () => {
             alt="Peaceful meditation background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-purple-900/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -49,8 +49,10 @@ const HomePage = () => {
             animate="visible"
             variants={scaleIn}
           >
-            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/20">
-              ✨ Welcome to Your Spiritual Journey
+            <span className="inline-block px-6 py-2 bg-white/10 text-white rounded-full text-sm font-medium border border-white/20">
+              <svg className="w-4 h-4 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>Welcome to Your Spiritual Journey
             </span>
           </motion.div>
 
@@ -82,13 +84,13 @@ const HomePage = () => {
           >
             <Link
               to="/about"
-              className="bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
             >
               Begin Your Inner Journey
             </Link>
             <Link
               to="/practices"
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 border-2 border-white/30 hover:border-white/50 hover:scale-105 transform"
+              className="bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 border-2 border-white/30 hover:border-white/50 hover:scale-105 transform"
             >
               Explore Practices
             </Link>
@@ -109,7 +111,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section Preview */}
-      <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <motion.div
@@ -120,11 +122,10 @@ const HomePage = () => {
               variants={fadeInUp}
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-purple-400 rounded-2xl blur-2xl opacity-20"></div>
                 <img
                   src="/HarmeetImages/img19.JPG"
                   alt="Harmeet Singh Chandhoke"
-                  className="relative w-full h-auto rounded-2xl shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+                  className="relative w-full h-auto rounded-2xl hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </motion.div>
@@ -171,7 +172,7 @@ const HomePage = () => {
       </section>
 
       {/* Soul Guide Book Preview */}
-      <section className="py-24 px-4 md:px-8 bg-gradient-to-br from-sky-50 via-white to-lavender-50">
+      <section className="py-24 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -181,7 +182,9 @@ const HomePage = () => {
             variants={fadeInUp}
           >
             <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
-              📖 Featured Book
+              <svg className="w-4 h-4 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+              </svg>Featured Book
             </span>
             <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
               Soul Guide Book
@@ -194,19 +197,19 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: "💡",
+                icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" /></svg>,
                 title: "Mind as a Supercomputer",
                 description: "Understand how your mind processes information and learn techniques to optimize its performance.",
                 color: "from-purple-400 to-purple-600"
               },
               {
-                icon: "❤️",
+                icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" /></svg>,
                 title: "Sacred Love",
                 description: "Discover the deeper meaning of love beyond romantic attachments and learn to cultivate it in all relationships.",
                 color: "from-sky-400 to-sky-600"
               },
               {
-                icon: "📱",
+                icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>,
                 title: "Gen Z Spirituality",
                 description: "Bridging ancient spiritual wisdom with modern digital challenges faced by today's youth.",
                 color: "from-yellow-400 to-orange-500"
@@ -221,7 +224,7 @@ const HomePage = () => {
                 variants={fadeInUp}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300`}>
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">{item.title}</h3>
@@ -241,7 +244,7 @@ const HomePage = () => {
           >
             <Link
               to="/soul-guide"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-purple-500 hover:from-sky-600 hover:to-purple-600 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform"
+              className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
             >
               Explore the Soul Guide
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -263,7 +266,9 @@ const HomePage = () => {
             variants={fadeInUp}
           >
             <span className="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold mb-4">
-              🧘 Daily Practices
+              <svg className="w-4 h-4 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+              </svg>Daily Practices
             </span>
             <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-4 text-gray-900">
               Daily Soul Practices
@@ -356,7 +361,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-8">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
               </svg>
@@ -386,7 +391,9 @@ const HomePage = () => {
             </form>
 
             <p className="text-sm text-white/80">
-              🔒 We respect your privacy. Unsubscribe at any time.
+              <svg className="w-3 h-3 inline-block mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>We respect your privacy. Unsubscribe at any time.
             </p>
           </motion.div>
         </div>

@@ -105,22 +105,22 @@ const QuotesPage = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-sky-50 via-white to-lavender-50">
+    <div className="w-full min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
+      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-900/85 via-purple-900/75 to-pink-900/70"></div>
+          <div className="absolute inset-0 bg-white/5"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <motion.div
-            className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20"
+            className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 border border-gray-200"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <svg
-              className="w-10 h-10 text-white"
+              className="w-10 h-10 text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -130,7 +130,7 @@ const QuotesPage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-[Playfair_Display]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-[Playfair_Display]"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -139,7 +139,7 @@ const QuotesPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -151,7 +151,7 @@ const QuotesPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 px-4 bg-white/80 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+      <section className="py-12 px-4 bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-3 gap-6 text-center">
             <motion.div

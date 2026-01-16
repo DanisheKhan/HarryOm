@@ -164,14 +164,14 @@ const WisdomDropsPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-900 via-purple-900 to-pink-900">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+          <div className="absolute inset-0 bg-white/5"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif"
+            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -180,7 +180,7 @@ const WisdomDropsPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -375,7 +375,7 @@ const WisdomDropsPage = () => {
               <img
                 src="/HarmeetImages/img19.JPG"
                 alt="Featured Collection"
-                className="w-full h-auto rounded-2xl shadow-xl"
+                className="w-full h-auto rounded-2xl"
               />
             </div>
           </div>
