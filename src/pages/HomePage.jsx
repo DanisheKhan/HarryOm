@@ -37,46 +37,54 @@ const HomePage = () => {
           <img
             src="/HarmeetImages/img5.jpg"
             alt="Peaceful meditation background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center scale-100"
+            style={{ objectPosition: 'center 10%' }}
           />
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl">
+        <div className="relative z-10 text-center px-6 md:px-8 max-w-5xl mx-auto">
           <motion.div
-            className="mb-6"
+            className="mb-8"
             initial="hidden"
             animate="visible"
             variants={scaleIn}
           >
-            <span className="inline-block px-6 py-2 bg-white/10 text-white rounded-full text-sm font-medium border border-white/20">
-              <svg className="w-4 h-4 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>Welcome to Your Spiritual Journey
+            <span className="text-white/80 text-xs md:text-sm tracking-[0.3em] uppercase font-light">
+              Welcome to Your Spiritual Journey
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-[Playfair_Display] leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-8 font-[Playfair_Display] leading-[1.1] tracking-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
           >
-            "You are not broken.<br />You are just becoming."
+            You are not broken.
+            <br />
+            <span className="italic font-normal">You are just becoming.</span>
           </motion.h1>
 
+          <motion.div
+            className="w-16 h-[1px] bg-white/40 mx-auto mb-8"
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: 64, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          ></motion.div>
+
           <motion.p
-            className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-white/85 mb-14 max-w-xl mx-auto leading-relaxed font-light"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             transition={{ delay: 0.2 }}
           >
-            Discover the path to inner peace and spiritual awakening with Harry Om's teachings
+            Discover the path to inner peace and spiritual awakening
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-5 justify-center items-center"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -84,18 +92,37 @@ const HomePage = () => {
           >
             <Link
               to="/about"
-              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+              className="group relative px-10 py-3.5 text-white font-light text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 hover:tracking-widest"
             >
-              Begin Your Inner Journey
+              <span className="relative z-10">Begin Your Journey</span>
+              <div className="absolute inset-0 border border-white/40 group-hover:border-white/60 transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500"></div>
             </Link>
             <Link
               to="/practices"
-              className="bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 border-2 border-white/30 hover:border-white/50 hover:scale-105 transform"
+              className="text-white/70 hover:text-white font-light text-sm tracking-wider uppercase transition-all duration-300 underline underline-offset-8 decoration-white/30 hover:decoration-white/60"
             >
               Explore Practices
             </Link>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-white/60 text-xs tracking-widest uppercase font-light">Scroll</span>
+            <motion.div
+              className="w-[1px] h-12 bg-gradient-to-b from-white/60 to-transparent"
+              animate={{ opacity: [0.6, 1, 0.6] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            ></motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* About Section Preview */}
