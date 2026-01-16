@@ -220,7 +220,7 @@ const QuotesPage = () => {
                   {/* Category badge */}
                   <div className="mb-7">
                     <span className={`inline-block px-5 py-2 bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-100 to-purple-100"} bg-opacity-20 rounded-full text-sm font-semibold shadow-sm`}>
-                      <span className={`bg-gradient-to-r ${categoryColors[quote.category] || "from-sky-600 to-purple-600"} bg-clip-text text-transparent`}>
+                      <span className="text-white">
                         {quote.category}
                       </span>
                     </span>
