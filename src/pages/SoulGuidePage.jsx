@@ -29,7 +29,7 @@ const SoulGuidePage = () => {
     },
     {
       title: "Sacred Love",
-      image: "/HarmeetImages/img10.JPG",
+      image: "/HarmeetImages/img6.jpg",
       description: "Explore the true meaning of love beyond romantic relationships. Learn how to cultivate self-love, create authentic connections with others, and extend compassion to all beings through daily practices and mindset shifts.",
       keyPoints: [
         "The foundation of self-acceptance",
@@ -204,48 +204,48 @@ const SoulGuidePage = () => {
           {/* Active Chapter Content */}
           <motion.div
             key={activeChapter}
-            className="bg-white rounded-3xl overflow-hidden border border-gray-100"
+            className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row items-stretch">
               <div className="w-full md:w-2/5 relative overflow-hidden">
                 <img
                   src={chapters[activeChapter].image}
                   alt={chapters[activeChapter].title}
-                  className="w-full h-full object-cover object-center min-h-[400px]"
+                  className="w-full h-full object-cover object-center min-h-[400px] md:min-h-[600px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
 
-              <div className="w-full md:w-3/5 p-10 md:p-12">
-                <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-sky-600 to-purple-600 bg-clip-text text-transparent">
+              <div className="w-full md:w-3/5 p-8 md:p-16 flex flex-col justify-center">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-sky-600 to-purple-600 bg-clip-text text-transparent font-[Playfair_Display]">
                   {chapters[activeChapter].title}
                 </h3>
 
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+                <p className="text-gray-700 mb-10 text-lg leading-relaxed">
                   {chapters[activeChapter].description}
                 </p>
 
-                <h4 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <h4 className="text-xl font-bold mb-5 text-gray-900 flex items-center gap-2">
                   <svg className="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   Key Takeaways:
                 </h4>
 
-                <ul className="space-y-3 mb-10">
+                <ul className="space-y-4 mb-12">
                   {chapters[activeChapter].keyPoints.map((point, index) => (
                     <li key={index} className="flex items-start group">
                       <span className="text-sky-600 mr-3 text-xl group-hover:scale-125 transition-transform">•</span>
-                      <span className="text-gray-700">{point}</span>
+                      <span className="text-gray-700 text-lg">{point}</span>
                     </li>
                   ))}
                 </ul>
 
                 <button
-                  className="text-sky-600 hover:text-sky-700 font-semibold inline-flex items-center gap-2 group"
+                  className="text-sky-600 hover:text-sky-700 font-semibold inline-flex items-center gap-2 group text-lg"
                 >
                   <span>Read sample</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">

@@ -46,7 +46,7 @@ const insightsData = [
     title: "The Power of Sacred Relationship",
     excerpt: "Relationships are mirrors and portals to our highest evolution when approached with consciousness.",
     content: "Relationships offer us one of the most potent vehicles for spiritual growth and self-awareness. When we approach our relationships—whether romantic, familial, or friendly—as sacred containers for evolution, everything changes. The people closest to us inevitably trigger our unhealed wounds and unintegrated shadows, not because they're trying to hurt us, but because they're helping us see what needs healing. Every trigger becomes an invitation to look within. Every conflict becomes an opportunity to practice presence, compassion, and clear communication. By viewing relationships through this lens, we transform them from sources of struggle into portals for profound healing and awakening.",
-    image: "/HarmeetImages/img10.JPG",
+    image: "/HarmeetImages/img9.JPG",
     date: "September 5, 2023",
     readTime: "8 min read"
   },

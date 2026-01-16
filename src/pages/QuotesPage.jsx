@@ -149,41 +149,82 @@ const QuotesPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 px-4 bg-white border-b border-gray-100 shadow-sm">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-3 gap-6 text-center">
+      <section className="py-10 px-4 bg-gradient-to-b from-white via-sky-50/30 to-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="group"
+              transition={{ delay: 0.3, duration: 0.5 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group relative"
             >
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-                {quotes.length}
-              </p>
-              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Quotes</p>
+              <div className="relative bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <div className="relative mb-2 flex justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-sky-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 bg-clip-text text-transparent mb-1 text-center">
+                  {quotes.length}
+                </p>
+                <p className="relative text-gray-700 text-sm font-semibold text-center">Quotes</p>
+              </div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="group"
+              transition={{ delay: 0.4, duration: 0.5 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group relative"
             >
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
-                ∞
-              </p>
-              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Wisdom</p>
+              <div className="relative bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <div className="relative mb-2 flex justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-1 text-center">
+                  ∞
+                </p>
+                <p className="relative text-gray-700 text-sm font-semibold text-center">Wisdom</p>
+              </div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="group"
+              transition={{ delay: 0.5, duration: 0.5 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group relative"
             >
-              <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-purple-600 bg-clip-text text-transparent">
-                1
-              </p>
-              <p className="text-gray-600 text-sm md:text-base mt-2 font-medium">Truth</p>
+              <div className="relative bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <div className="relative mb-2 flex justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-purple-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-500 via-purple-500 to-purple-600 bg-clip-text text-transparent mb-1 text-center">
+                  1
+                </p>
+                <p className="relative text-gray-700 text-sm font-semibold text-center">Truth</p>
+              </div>
             </motion.div>
           </div>
         </div>
