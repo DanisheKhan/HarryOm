@@ -160,11 +160,6 @@ const SoulGuidePage = () => {
                 connection in an age of digital distraction and information overload.
               </p>
 
-              <button
-                className="bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-full py-4 px-10 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform"
-              >
-                Purchase the Book
-              </button>
             </motion.div>
           </div>
         </div>
