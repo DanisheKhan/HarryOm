@@ -28,7 +28,7 @@ const WisdomDropsPage = () => {
       id: 1,
       title: 'Mind as a Supercomputer',
       description: 'Understanding how your thoughts create your reality and how to optimize your mental processes.',
-      image: '/HarmeetImages/img12.JPG',
+      image: '/HarmeetImages/img12.jpg',
       type: 'video',
       duration: '18:42',
       link: 'https://youtube.com'
@@ -37,7 +37,7 @@ const WisdomDropsPage = () => {
       id: 2,
       title: 'Morning Meditation for Clarity',
       description: 'Start your day with this 10-minute guided meditation to set intentions and create mental space.',
-      image: '/HarmeetImages/img6.JPG',
+      image: '/HarmeetImages/img6.jpg',
       type: 'meditation',
       duration: '10:15',
       link: 'https://spotify.com'
@@ -46,7 +46,7 @@ const WisdomDropsPage = () => {
       id: 3,
       title: 'Digital Detox Protocol',
       description: 'Learn practical strategies to maintain a healthy relationship with technology in this audio session.',
-      image: '/HarmeetImages/img8.JPG',
+      image: '/HarmeetImages/img8.jpg',
       type: 'audio',
       duration: '24:30',
       link: 'https://spotify.com'
@@ -55,7 +55,7 @@ const WisdomDropsPage = () => {
       id: 4,
       title: 'Sacred Love: Beyond Romance',
       description: 'Understanding the deeper dimensions of love that transcend romantic relationships.',
-      image: '/HarmeetImages/img10.JPG',
+      image: '/HarmeetImages/img10.jpg',
       type: 'video',
       duration: '15:22',
       link: 'https://youtube.com'
@@ -64,7 +64,7 @@ const WisdomDropsPage = () => {
       id: 5,
       title: 'Healing Frequency: 528Hz',
       description: 'Experience the healing vibrations of the 528Hz frequency, known as the "love frequency".',
-      image: '/HarmeetImages/img13.JPG',
+      image: '/HarmeetImages/img13.jpg',
       type: 'music',
       duration: '30:00',
       link: 'https://spotify.com'
@@ -73,7 +73,7 @@ const WisdomDropsPage = () => {
       id: 6,
       title: 'Breath of Fire Technique',
       description: 'Learn this powerful Kundalini breathing technique to energize your system and clear your mind.',
-      image: '/HarmeetImages/img14.JPG',
+      image: '/HarmeetImages/img14.jpg',
       type: 'video',
       duration: '12:48',
       link: 'https://youtube.com'
@@ -82,7 +82,7 @@ const WisdomDropsPage = () => {
       id: 7,
       title: 'Evening Wind-Down Meditation',
       description: 'Release the day and prepare your mind and body for restful sleep with this gentle practice.',
-      image: '/HarmeetImages/img17.JPG',
+      image: '/HarmeetImages/img17.jpg',
       type: 'meditation',
       duration: '15:10',
       link: 'https://spotify.com'
@@ -91,7 +91,7 @@ const WisdomDropsPage = () => {
       id: 8,
       title: 'Ocean Soundscape for Focus',
       description: 'Ambient ocean sounds designed to enhance concentration and creative work.',
-      image: '    image: "/HarmeetImages/img7.jpg",',
+      image: '/HarmeetImages/img7.jpg',
       type: 'music',
       duration: '45:00',
       link: 'https://spotify.com'
@@ -373,7 +373,7 @@ const WisdomDropsPage = () => {
 
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <img
-                src="/HarmeetImages/img19.JPG"
+                src="/HarmeetImages/img19.jpg"
                 alt="Featured Collection"
                 className="w-full h-auto rounded-2xl"
               />

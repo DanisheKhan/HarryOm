@@ -7,7 +7,7 @@ const SoulGuidePage = () => {
   const chapters = [
     {
       title: "Mind as a Supercomputer",
-      image: "/HarmeetImages/img12.JPG",
+      image: "/HarmeetImages/img12.jpg",
       description: "In this chapter, Harmeet explores the powerful capabilities of the human mind and how to program it for peace and clarity instead of chaos. Learn techniques to manage your thoughts, reduce mental noise, and optimize your mind's natural abilities.",
       keyPoints: [
         "Understanding the mind's operating system",
@@ -18,7 +18,7 @@ const SoulGuidePage = () => {
     },
     {
       title: "Gen Z Spirituality",
-      image: "/HarmeetImages/img13.JPG",
+      image: "/HarmeetImages/img13.jpg",
       description: "This chapter bridges ancient spiritual wisdom with the unique challenges facing the younger generation. Discover how to maintain spiritual grounding while navigating social media, information overload, and rapidly changing technology.",
       keyPoints: [
         "Adapting timeless wisdom for modern challenges",
@@ -40,7 +40,7 @@ const SoulGuidePage = () => {
     },
     {
       title: "Digital Detox Protocol",
-      image: "/HarmeetImages/img9.JPG",
+      image: "/HarmeetImages/img9.jpg",
       description: "Learn practical strategies to maintain a healthy relationship with technology. This chapter offers step-by-step guidance for creating boundaries with digital devices without completely disconnecting from the modern world.",
       keyPoints: [
         "Creating a personalized digital wellness plan",
@@ -115,7 +115,7 @@ const SoulGuidePage = () => {
             >
               <div className="relative">
                 <img
-                  src="/HarmeetImages/img8.JPG"
+                  src="/HarmeetImages/img8.jpg"
                   alt="Soul Guide Book"
                   className="relative w-full h-auto rounded-3xl hover:scale-[1.02] transition-transform duration-500"
                 />
