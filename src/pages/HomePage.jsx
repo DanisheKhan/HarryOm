@@ -124,7 +124,7 @@ const HomePage = () => {
             >
               <div className="relative">
                 <img
-                  src="/HarmeetImages/img19.jpg"
+                  src="/HarmeetImages/img19.JPG"
                   alt="Harmeet Singh Chandhoke"
                   loading="lazy"
                   decoding="async"
@@ -290,20 +290,20 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/HarmeetImages/img8.jpg",
+                image: "/HarmeetImages/img8.JPG",
                 title: "Digital Fasting",
                 description: "Take regular breaks from digital devices to reconnect with yourself and the physical world around you.",
                 gradient: "from-lavender-400 to-purple-500"
               },
               {
-                image: "/HarmeetImages/img11.jpg",
+                image: "/HarmeetImages/img11.JPG",
                 title: "Sacred Mornings",
                 description: "Create a peaceful morning routine to set a positive tone for the day ahead.",
                 gradient: "from-sky-400 to-cyan-500",
                 objectPosition: "center 18%"
               },
               {
-                image: "/HarmeetImages/img14.jpg",
+                image: "/HarmeetImages/img14.JPG",
                 title: "Breathwork",
                 description: "Simple breathing techniques to calm your mind and energize your body.",
                 gradient: "from-amber-400 to-orange-500",

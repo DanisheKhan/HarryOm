@@ -28,7 +28,7 @@ const WisdomDropsPage = () => {
       id: 1,
       title: 'Mind as a Supercomputer',
       description: 'Understanding how your thoughts create your reality and how to optimize your mental processes.',
-      image: '/HarmeetImages/img12.jpg',
+      image: '/HarmeetImages/img12.JPG',
       type: 'video',
       duration: '18:42',
       link: 'https://youtube.com'
@@ -46,7 +46,7 @@ const WisdomDropsPage = () => {
       id: 3,
       title: 'Digital Detox Protocol',
       description: 'Learn practical strategies to maintain a healthy relationship with technology in this audio session.',
-      image: '/HarmeetImages/img8.jpg',
+      image: '/HarmeetImages/img8.JPG',
       type: 'audio',
       duration: '24:30',
       link: 'https://spotify.com'
@@ -64,7 +64,7 @@ const WisdomDropsPage = () => {
       id: 5,
       title: 'Healing Frequency: 528Hz',
       description: 'Experience the healing vibrations of the 528Hz frequency, known as the "love frequency".',
-      image: '/HarmeetImages/img13.jpg',
+      image: '/HarmeetImages/img13.JPG',
       type: 'music',
       duration: '30:00',
       link: 'https://spotify.com'
@@ -73,7 +73,7 @@ const WisdomDropsPage = () => {
       id: 6,
       title: 'Breath of Fire Technique',
       description: 'Learn this powerful Kundalini breathing technique to energize your system and clear your mind.',
-      image: '/HarmeetImages/img14.jpg',
+      image: '/HarmeetImages/img14.JPG',
       type: 'video',
       duration: '12:48',
       link: 'https://youtube.com'
@@ -82,7 +82,7 @@ const WisdomDropsPage = () => {
       id: 7,
       title: 'Evening Wind-Down Meditation',
       description: 'Release the day and prepare your mind and body for restful sleep with this gentle practice.',
-      image: '/HarmeetImages/img17.jpg',
+      image: '/HarmeetImages/img17.JPG',
       type: 'meditation',
       duration: '15:10',
       link: 'https://spotify.com'
@@ -375,7 +375,7 @@ const WisdomDropsPage = () => {
 
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <img
-                src="/HarmeetImages/img19.jpg"
+                src="/HarmeetImages/img19.JPG"
                 alt="Featured Collection"
                 loading="lazy"
                 decoding="async"
