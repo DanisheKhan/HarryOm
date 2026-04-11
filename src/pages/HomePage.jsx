@@ -294,13 +294,15 @@ const HomePage = () => {
                 image: "/HarmeetImages/img11.jpg",
                 title: "Sacred Mornings",
                 description: "Create a peaceful morning routine to set a positive tone for the day ahead.",
-                gradient: "from-sky-400 to-cyan-500"
+                gradient: "from-sky-400 to-cyan-500",
+                objectPosition: "center 18%"
               },
               {
                 image: "/HarmeetImages/img14.jpg",
                 title: "Breathwork",
                 description: "Simple breathing techniques to calm your mind and energize your body.",
-                gradient: "from-amber-400 to-orange-500"
+                gradient: "from-amber-400 to-orange-500",
+                objectPosition: "center 22%"
               }
             ].map((practice, index) => (
               <motion.div
@@ -317,6 +319,7 @@ const HomePage = () => {
                     src={practice.image}
                     alt={practice.title}
                     className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    style={{ objectPosition: practice.objectPosition || "center" }}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${practice.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
                 </div>
