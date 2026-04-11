@@ -78,6 +78,8 @@ const AboutPage = () => {
                 <img
                   src="/HarmeetImages/img3.jpg"
                   alt="Harmeet Singh Chandhoke Portrait"
+                  loading="lazy"
+                  decoding="async"
                   className="relative w-full h-auto rounded-2xl hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>

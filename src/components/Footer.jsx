@@ -18,7 +18,7 @@ const Footer = () => {
             <Link to="/" className="inline-flex items-center space-x-3 group mb-6">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-purple-400 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <img src="/HarryOmLogo.png" alt="Harry Om Logo" className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+                <img src="/HarryOmLogo.png" alt="Harry Om Logo" loading="lazy" decoding="async" className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <span className="text-2xl font-bold font-[Playfair_Display] bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent">Harry Om</span>
             </Link>

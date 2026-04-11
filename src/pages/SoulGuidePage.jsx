@@ -117,6 +117,9 @@ const SoulGuidePage = () => {
                 <img
                   src="/HarmeetImages/img8.jpg"
                   alt="Soul Guide Book"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="relative w-full h-auto rounded-3xl hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
@@ -214,6 +217,8 @@ const SoulGuidePage = () => {
                 <img
                   src={chapters[activeChapter].image}
                   alt={chapters[activeChapter].title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center min-h-[400px] md:min-h-[600px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>

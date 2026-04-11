@@ -132,6 +132,9 @@ const Navbar = () => {
             <img
               src="/HarryOmLogo.png"
               alt="Harry Om Logo"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-11 h-11 transition-transform duration-300"
             />
           </motion.div>

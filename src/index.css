@@ -114,6 +114,47 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Network-aware optimization for slower connections */
+html[data-network="slow-2g"] .bg-blur,
+html[data-network="2g"] .bg-blur,
+html[data-network="3g"] .bg-blur,
+html[data-save-data="on"] .bg-blur,
+html[data-network="slow-2g"] .bg-glass,
+html[data-network="2g"] .bg-glass,
+html[data-network="3g"] .bg-glass,
+html[data-save-data="on"] .bg-glass {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+html[data-network="slow-2g"] .parallax,
+html[data-network="2g"] .parallax,
+html[data-network="3g"] .parallax,
+html[data-save-data="on"] .parallax {
+  background-attachment: scroll;
+}
+
+html[data-network="slow-2g"] *,
+html[data-network="2g"] *,
+html[data-save-data="on"] * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+html[data-network="slow-2g"] .hover-lift:hover,
+html[data-network="2g"] .hover-lift:hover,
+html[data-network="3g"] .hover-lift:hover,
+html[data-save-data="on"] .hover-lift:hover,
+html[data-network="slow-2g"] .hover-lift-sm:hover,
+html[data-network="2g"] .hover-lift-sm:hover,
+html[data-network="3g"] .hover-lift-sm:hover,
+html[data-save-data="on"] .hover-lift-sm:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /* Hover Effects */
 .hover-lift {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

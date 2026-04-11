@@ -37,6 +37,9 @@ const HomePage = () => {
           <img
             src="/HarmeetImages/img6.jpg"
             alt="Peaceful meditation background"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-center scale-100"
             style={{ objectPosition: 'center 5%' }}
           />
@@ -123,6 +126,8 @@ const HomePage = () => {
                 <img
                   src="/HarmeetImages/img19.jpg"
                   alt="Harmeet Singh Chandhoke"
+                  loading="lazy"
+                  decoding="async"
                   className="relative w-full h-auto rounded-2xl hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
@@ -318,6 +323,8 @@ const HomePage = () => {
                   <img
                     src={practice.image}
                     alt={practice.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-700"
                     style={{ objectPosition: practice.objectPosition || "center" }}
                   />
