@@ -131,7 +131,7 @@ const Navbar = () => {
           >
             <img
               src="/HarryOmLogo.png"
-              alt="Harry Om Logo"
+              alt="Harryy Om Logo"
               loading="eager"
               fetchPriority="high"
               decoding="async"

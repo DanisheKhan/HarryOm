@@ -296,7 +296,7 @@ const SoulGuidePage = () => {
               <p className="text-gray-700 italic leading-relaxed">
                 "This book came to me during my freshman year when I was feeling overwhelmed by social
                 media and college life. The digital detox protocol literally saved my mental health.
-                Thank you, Harry Om!"
+                Thank you, Harryy Om!"
               </p>
             </motion.div>
 
@@ -371,7 +371,7 @@ const SoulGuidePage = () => {
 
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join our newsletter to receive a complimentary chapter from "Living Right in the Digital Age"
-              and weekly spiritual insights from Harry Om.
+              and weekly spiritual insights from Harryy Om.
             </p>
 
             <form className="flex flex-col md:flex-row gap-4 max-w-lg mx-auto mb-6">

@@ -56,7 +56,7 @@ const ConnectPage = () => {
             variants={fadeIn}
             transition={{ delay: 0.2 }}
           >
-            Reach out to Harry Om for guidance, sessions, or partnership opportunities
+            Reach out to Harryy Om for guidance, sessions, or partnership opportunities
           </motion.p>
         </div>
       </section>
@@ -114,7 +114,7 @@ const ConnectPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2 text-lg">Wellness Center</h3>
-                    <p className="text-gray-700 font-medium">Harry Om Center for Consciousness</p>
+                    <p className="text-gray-700 font-medium">Harryy Om Center for Consciousness</p>
                     <p className="text-gray-600">Mumbai, Maharashtra, India</p>
                   </div>
                 </div>
@@ -265,10 +265,10 @@ const ConnectPage = () => {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
                 <span className="text-sky-600 text-2xl flex-shrink-0">Q.</span>
-                <span>What can I expect from a personal session with Harry Om?</span>
+                <span>What can I expect from a personal session with Harryy Om?</span>
               </h3>
               <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
-                Each session with Harry Om is uniquely tailored to your needs and may include spiritual guidance, energy work, meditation techniques, and practical tools for integration. Sessions typically last 60-90 minutes and can be conducted in person or online. You'll leave with greater clarity, specific practices, and a deeper connection to your authentic self.
+                Each session with Harryy Om is uniquely tailored to your needs and may include spiritual guidance, energy work, meditation techniques, and practical tools for integration. Sessions typically last 60-90 minutes and can be conducted in person or online. You'll leave with greater clarity, specific practices, and a deeper connection to your authentic self.
               </p>
             </motion.div>
 
@@ -299,7 +299,7 @@ const ConnectPage = () => {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
                 <span className="text-emerald-600 text-2xl flex-shrink-0">Q.</span>
-                <span>How can I book Harry Om for speaking engagements?</span>
+                <span>How can I book Harryy Om for speaking engagements?</span>
               </h3>
               <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
                 For speaking engagements, corporate workshops, or media appearances, please use our contact form with details about your event, including the date, location, audience, and theme. Our team will respond within 48 hours with availability and requirements.

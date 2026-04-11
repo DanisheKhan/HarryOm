@@ -99,7 +99,7 @@ const WisdomDropsPage = () => {
     {
       id: 9,
       title: 'Finding Purpose in Chaos',
-      description: 'Harry Om discusses how to discover your deeper calling amidst the noise of modern life.',
+      description: 'Harryy Om discusses how to discover your deeper calling amidst the noise of modern life.',
       image: "/HarmeetImages/img3.jpg",
       type: 'audio',
       duration: '32:15',

@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom';
 
 const seoByPath = {
   '/': {
-    title: 'Harry Om | Soul Guidance by Harmeet Singh',
+    title: 'Harryy Om | Soul Guidance by Harmeet Singh',
     description:
-      'Spiritual teachings, meditation practices, and digital-age soul guidance by Harmeet Singh Chandhoke (Harry Om).',
+      'Spiritual teachings, meditation practices, and digital-age soul guidance by Harmeet Singh Chandhoke (Harryy Om).',
   },
   '/about': {
-    title: 'About Harry Om | Harmeet Singh Chandhoke',
+    title: 'About Harryy Om | Harmeet Singh Chandhoke',
     description:
       'Learn the journey of Harmeet Singh Chandhoke and his mission to support mental wellbeing and spirituality for modern life.',
   },
@@ -18,14 +18,14 @@ const seoByPath = {
       'Explore the Soul Guide book, chapter insights, and practical spiritual tools for Gen Z and young professionals.',
   },
   '/quotes': {
-    title: 'Quotes and Wisdom | Harry Om',
+    title: 'Quotes and Wisdom | Harryy Om',
     description:
-      'Read uplifting spiritual quotes and mindful reflections from Harry Om for clarity, peace, and daily inspiration.',
+      'Read uplifting spiritual quotes and mindful reflections from Harryy Om for clarity, peace, and daily inspiration.',
   },
   '/connect': {
-    title: 'Connect with Harry Om',
+    title: 'Connect with Harryy Om',
     description:
-      'Contact Harry Om for updates, collaborations, and spiritual guidance resources.',
+      'Contact Harryy Om for updates, collaborations, and spiritual guidance resources.',
   },
 };
 

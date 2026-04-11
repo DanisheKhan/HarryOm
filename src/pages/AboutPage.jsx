@@ -48,7 +48,7 @@ const AboutPage = () => {
             animate="visible"
             variants={fadeIn}
           >
-            About Harry Om
+            About Harryy Om
           </motion.h1>
 
           <motion.p
@@ -132,7 +132,7 @@ const AboutPage = () => {
 
               <div className="space-y-6 text-lg text-gray-700">
                 <p>
-                  Harmeet Singh Chandhoke, known professionally as Harry Om, is a renowned spiritual guide
+                  Harmeet Singh Chandhoke, known professionally as Harryy Om, is a renowned spiritual guide
                   whose journey began in the bustling music industry of Bollywood as part of the famous
                   duo "Meet Bros". After years of success in the entertainment world, Harmeet felt a calling
                   toward deeper spiritual work.
@@ -146,14 +146,14 @@ const AboutPage = () => {
                 </p>
 
                 <p>
-                  Through his book "Living Right in the Digital Age," Harry Om offers practical guidance
+                  Through his book "Living Right in the Digital Age," Harryy Om offers practical guidance
                   for young people navigating the complexities of modern life. His teachings emphasize the
                   importance of digital detox, mindful living, authentic connection, and developing a
                   personal spiritual practice that fits within contemporary lifestyles.
                 </p>
 
                 <p>
-                  Harry Om combines his understanding of music, vibration, and energy with spiritual
+                  Harryy Om combines his understanding of music, vibration, and energy with spiritual
                   principles to create a unique approach to wellbeing. His work has touched thousands of
                   young lives, offering hope and practical tools for finding peace and purpose in a
                   chaotic world.
@@ -168,7 +168,7 @@ const AboutPage = () => {
                 </blockquote>
 
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Today, Harry Om divides his time between writing, speaking engagements, one-on-one
+                  Today, Harryy Om divides his time between writing, speaking engagements, one-on-one
                   coaching, and creating spiritual content that resonates with younger audiences. His
                   approach is non-dogmatic, inclusive, and focused on practical spirituality for everyday life.
                 </p>
@@ -197,7 +197,7 @@ const AboutPage = () => {
               Vision & Mission
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The guiding principles behind Harry Om's work
+              The guiding principles behind Harryy Om's work
             </p>
           </motion.div>
 

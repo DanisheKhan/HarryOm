@@ -18,9 +18,9 @@ const Footer = () => {
             <Link to="/" className="inline-flex items-center space-x-3 group mb-6">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-purple-400 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <img src="/HarryOmLogo.png" alt="Harry Om Logo" loading="lazy" decoding="async" className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+                <img src="/HarryOmLogo.png" alt="Harryy Om Logo" loading="lazy" decoding="async" className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <span className="text-2xl font-bold font-[Playfair_Display] bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent">Harry Om</span>
+              <span className="text-2xl font-bold font-[Playfair_Display] bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent">Harryy Om</span>
             </Link>
             <p className="text-gray-600 leading-relaxed mb-6">
               Spiritual guidance for the modern soul. Finding peace in a digital world.
@@ -62,7 +62,7 @@ const Footer = () => {
               <li>
                 <Link to="/about" className="text-gray-600 hover:text-sky-600 transition-colors duration-300 inline-flex items-center group">
                   <span className="w-0 h-0.5 bg-sky-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
-                  About Harry Om
+                  About Harryy Om
                 </Link>
               </li>
               <li>
@@ -144,7 +144,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm flex items-center gap-2">
-              <span>© {currentYear} Harry Om. All rights reserved.</span>
+              <span>© {currentYear} Harryy Om. All rights reserved.</span>
             </p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="text-gray-600 hover:text-sky-600 text-sm transition-colors duration-300 relative group">

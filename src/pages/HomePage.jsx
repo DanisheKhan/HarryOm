@@ -146,25 +146,25 @@ const HomePage = () => {
               </span>
 
               <h2 className="text-3xl md:text-5xl font-[Playfair_Display] font-bold mb-6 text-gray-900 leading-tight">
-                Meet Harry Om
+                Meet Harryy Om
               </h2>
 
               <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-                Harmeet Singh Chandhoke, known as Harry Om, is a spiritual guide dedicated to helping
+                Harmeet Singh Chandhoke, known as Harryy Om, is a spiritual guide dedicated to helping
                 the younger generation find peace in the digital age. His teachings combine ancient wisdom
                 with modern understanding of mental wellbeing.
               </p>
 
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                 Through his book "Living Right in the Digital Age" and his Gen Z focused spiritual coaching,
-                Harry Om has helped thousands reconnect with their inner selves.
+                Harryy Om has helped thousands reconnect with their inner selves.
               </p>
 
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition-colors group"
               >
-                Learn more about Harry Om
+                Learn more about Harryy Om
                 <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -353,7 +353,7 @@ const HomePage = () => {
               to="/connect"
               className="inline-flex items-center gap-2 text-sky-600 font-semibold text-lg hover:text-sky-700 transition-colors group"
             >
-              Start your practice with Harry Om
+              Start your practice with Harryy Om
               <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -386,7 +386,7 @@ const HomePage = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Subscribe to receive weekly insights, meditation guidance, and updates from Harry Om.
+              Subscribe to receive weekly insights, meditation guidance, and updates from Harryy Om.
             </p>
 
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
