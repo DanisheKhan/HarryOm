@@ -22,7 +22,7 @@ const ConnectPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[58svh] md:h-[65vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
@@ -41,7 +41,7 @@ const ConnectPage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 font-serif leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-8 font-serif leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -50,7 +50,7 @@ const ConnectPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -62,7 +62,7 @@ const ConnectPage = () => {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-20 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Info */}
@@ -227,7 +227,7 @@ const ConnectPage = () => {
 
                     <button
                       type="submit"
-                      className="bg-sky-600 hover:bg-sky-700 text-white font-bold px-10 py-4 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
+                      className="w-full md:w-auto bg-sky-600 hover:bg-sky-700 text-white font-bold px-10 py-4 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
                     >
                       Send Message
                     </button>
@@ -240,7 +240,7 @@ const ConnectPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
             <span className="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">
@@ -267,7 +267,7 @@ const ConnectPage = () => {
                 <span className="text-sky-600 text-2xl flex-shrink-0">Q.</span>
                 <span>What can I expect from a personal session with Harry Om?</span>
               </h3>
-              <p className="text-gray-700 leading-relaxed pl-8">
+              <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
                 Each session with Harry Om is uniquely tailored to your needs and may include spiritual guidance, energy work, meditation techniques, and practical tools for integration. Sessions typically last 60-90 minutes and can be conducted in person or online. You'll leave with greater clarity, specific practices, and a deeper connection to your authentic self.
               </p>
             </motion.div>
@@ -284,7 +284,7 @@ const ConnectPage = () => {
                 <span className="text-purple-600 text-2xl flex-shrink-0">Q.</span>
                 <span>Do I need previous meditation experience for your workshops?</span>
               </h3>
-              <p className="text-gray-700 leading-relaxed pl-8">
+              <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
                 No previous experience is required. Our workshops accommodate all levels, from complete beginners to experienced practitioners. We provide clear instructions and supportive guidance throughout the process. Each participant's journey is honored exactly where they are.
               </p>
             </motion.div>
@@ -301,7 +301,7 @@ const ConnectPage = () => {
                 <span className="text-emerald-600 text-2xl flex-shrink-0">Q.</span>
                 <span>How can I book Harry Om for speaking engagements?</span>
               </h3>
-              <p className="text-gray-700 leading-relaxed pl-8">
+              <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
                 For speaking engagements, corporate workshops, or media appearances, please use our contact form with details about your event, including the date, location, audience, and theme. Our team will respond within 48 hours with availability and requirements.
               </p>
             </motion.div>
@@ -318,7 +318,7 @@ const ConnectPage = () => {
                 <span className="text-amber-600 text-2xl flex-shrink-0">Q.</span>
                 <span>Are scholarships available for your programs?</span>
               </h3>
-              <p className="text-gray-700 leading-relaxed pl-8">
+              <p className="text-gray-700 leading-relaxed pl-0 sm:pl-8">
                 Yes, we believe in making spiritual guidance accessible. We offer a limited number of scholarships for each program based on financial need. Please contact us at least one month before the program start date to apply, explaining your circumstances and how the program would benefit your growth.
               </p>
             </motion.div>

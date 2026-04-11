@@ -107,7 +107,7 @@ const QuotesPage = () => {
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[50svh] md:h-[55vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
@@ -128,7 +128,7 @@ const QuotesPage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-[Playfair_Display]"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-[Playfair_Display]"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -137,7 +137,7 @@ const QuotesPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -231,7 +231,7 @@ const QuotesPage = () => {
       </section>
 
       {/* Quotes Section */}
-      <section className="py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}
@@ -290,7 +290,7 @@ const QuotesPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 px-4 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>

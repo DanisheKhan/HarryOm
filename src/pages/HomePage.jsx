@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[88svh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/HarmeetImages/img6.jpg"
@@ -46,7 +46,7 @@ const HomePage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 md:px-8 max-w-6xl mx-auto py-20 mt-12 md:mt-16">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto py-16 md:py-20 mt-2 md:mt-6">
           <motion.div
             className="mb-10 md:mb-12"
             initial="hidden"
@@ -59,7 +59,7 @@ const HomePage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-light text-white mb-10 md:mb-12 font-[Playfair_Display] leading-[1.15] tracking-tight px-4"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-light text-white mb-8 md:mb-12 font-[Playfair_Display] leading-[1.15] tracking-tight px-2 sm:px-4"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -77,7 +77,7 @@ const HomePage = () => {
           ></motion.div>
 
           <motion.p
-            className="text-sm md:text-base lg:text-lg text-white/80 mb-16 md:mb-20 max-w-2xl mx-auto leading-relaxed font-light tracking-wide"
+            className="text-sm md:text-base lg:text-lg text-white/80 mb-12 md:mb-20 max-w-2xl mx-auto leading-relaxed font-light tracking-wide"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -112,7 +112,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section Preview */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <motion.div
@@ -175,7 +175,7 @@ const HomePage = () => {
       </section>
 
       {/* Soul Guide Book Preview */}
-      <section className="py-24 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -265,7 +265,7 @@ const HomePage = () => {
       </section>
 
       {/* Practices Preview */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -363,7 +363,7 @@ const HomePage = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 px-4 md:px-8 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-sky-500 via-sky-600 to-purple-600 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-400/30 rounded-full blur-3xl"></div>

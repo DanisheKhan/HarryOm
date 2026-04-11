@@ -63,7 +63,7 @@ const SoulGuidePage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[62svh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
@@ -82,7 +82,7 @@ const SoulGuidePage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 font-[Playfair_Display] leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-8 font-[Playfair_Display] leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -91,7 +91,7 @@ const SoulGuidePage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -103,7 +103,7 @@ const SoulGuidePage = () => {
       </section>
 
       {/* Book Overview */}
-      <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <motion.div
@@ -166,7 +166,7 @@ const SoulGuidePage = () => {
       </section>
 
       {/* Chapter Slider */}
-      <section className="py-24 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit mx-auto">
@@ -214,7 +214,7 @@ const SoulGuidePage = () => {
                   alt={chapters[activeChapter].title}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center min-h-[400px] md:min-h-[600px]"
+                  className="w-full h-full object-cover object-center min-h-[280px] sm:min-h-[360px] md:min-h-[600px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
@@ -259,7 +259,7 @@ const SoulGuidePage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit mx-auto">
@@ -350,7 +350,7 @@ const SoulGuidePage = () => {
       </section>
 
       {/* Download Preview */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             className="bg-white rounded-3xl p-10 md:p-16 shadow-2xl text-center"

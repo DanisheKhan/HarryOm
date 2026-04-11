@@ -164,14 +164,14 @@ const WisdomDropsPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[52svh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -180,7 +180,7 @@ const WisdomDropsPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -192,7 +192,7 @@ const WisdomDropsPage = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-14 md:py-16 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
             <div>
@@ -297,7 +297,7 @@ const WisdomDropsPage = () => {
       </section>
 
       {/* Featured Playlist */}
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-14 md:py-16 px-4 md:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2 order-2 md:order-1">

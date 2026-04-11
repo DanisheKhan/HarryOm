@@ -22,7 +22,7 @@ const AboutPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[58svh] md:h-[65vh] flex items-center justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
@@ -43,7 +43,7 @@ const AboutPage = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-[Playfair_Display] leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-[Playfair_Display] leading-tight"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -52,7 +52,7 @@ const AboutPage = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -64,7 +64,7 @@ const AboutPage = () => {
       </section>
 
       {/* Bio Section */}
-      <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-start gap-16">
             <motion.div
@@ -179,7 +179,7 @@ const AboutPage = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -256,7 +256,7 @@ const AboutPage = () => {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
