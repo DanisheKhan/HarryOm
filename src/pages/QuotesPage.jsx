@@ -313,21 +313,21 @@ const QuotesPage = () => {
               Let Wisdom Guide Your Path
             </h2>
             <p className="text-xl md:text-2xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Explore more insights, practices, and teachings for your spiritual growth
+              Explore more teachings and guidance for your spiritual growth
             </p>
 
             <div className="flex flex-wrap gap-5 justify-center">
               <a
-                href="/practices"
+                href="/soul-guide"
                 className="bg-white hover:bg-gray-100 text-sky-700 font-bold rounded-full py-4 px-9 transition-all duration-300 shadow-2xl hover:shadow-xl hover:scale-105 transform"
               >
-                Explore Practices
+                Explore the Soul Guide
               </a>
               <a
-                href="/insights"
+                href="/connect"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold rounded-full py-4 px-9 transition-all duration-300 border-2 border-white/40 hover:border-white/60 hover:scale-105 transform"
               >
-                Read Insights
+                Connect with Harry Om
               </a>
             </div>
           </motion.div>

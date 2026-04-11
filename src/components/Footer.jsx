@@ -72,9 +72,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/practices" className="text-gray-600 hover:text-sky-600 transition-colors duration-300 inline-flex items-center group">
+                <Link to="/quotes" className="text-gray-600 hover:text-sky-600 transition-colors duration-300 inline-flex items-center group">
                   <span className="w-0 h-0.5 bg-sky-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
-                  Practices & Rituals
+                  Quotes & Wisdom
                 </Link>
               </li>
             </ul>
@@ -87,9 +87,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/blog" className="text-gray-600 hover:text-sky-600 transition-colors duration-300 inline-flex items-center group">
+                <Link to="/quotes" className="text-gray-600 hover:text-sky-600 transition-colors duration-300 inline-flex items-center group">
                   <span className="w-0 h-0.5 bg-sky-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
-                  Blog & Insights
+                  Quotes & Insights
                 </Link>
               </li>
               <li>

@@ -7,8 +7,6 @@ const navigationLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
   { path: '/soul-guide', label: 'Soul Guide' },
-  { path: '/practices', label: 'Practices' },
-  { path: '/insights', label: 'Insights' },
   { path: '/quotes', label: 'Quotes' },
 ];
 

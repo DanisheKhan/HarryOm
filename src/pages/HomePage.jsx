@@ -99,10 +99,10 @@ const HomePage = () => {
               <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500"></div>
             </Link>
             <Link
-              to="/practices"
+              to="/soul-guide"
               className="text-white/65 hover:text-white/95 font-light text-xs md:text-sm tracking-[0.15em] uppercase transition-all duration-300 underline underline-offset-8 decoration-white/40 hover:decoration-white/70"
             >
-              Explore Practices
+              Explore the Book
             </Link>
           </motion.div>
         </div>
@@ -340,10 +340,10 @@ const HomePage = () => {
             variants={fadeInUp}
           >
             <Link
-              to="/practices"
+              to="/connect"
               className="inline-flex items-center gap-2 text-sky-600 font-semibold text-lg hover:text-sky-700 transition-colors group"
             >
-              Explore all practices
+              Start your practice with Harry Om
               <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
