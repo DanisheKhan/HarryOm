@@ -45,6 +45,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 body {
@@ -52,8 +54,15 @@ body {
   color: #1f2937;
   background-color: #ffffff;
   overflow-x: hidden;
+  -ms-overflow-style: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 h1,
