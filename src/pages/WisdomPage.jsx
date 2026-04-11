@@ -37,7 +37,7 @@ const WisdomDropsPage = () => {
       id: 2,
       title: 'Morning Meditation for Clarity',
       description: 'Start your day with this 10-minute guided meditation to set intentions and create mental space.',
-      image: '/HarmeetImages/img5.JPG',
+      image: '/HarmeetImages/img6.JPG',
       type: 'meditation',
       duration: '10:15',
       link: 'https://spotify.com'
