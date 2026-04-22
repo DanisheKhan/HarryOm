@@ -65,12 +65,12 @@ const SeoManager = () => {
     setPropertyMeta('og:title', seo.title);
     setPropertyMeta('og:description', seo.description);
     setPropertyMeta('og:url', canonicalUrl);
-    setPropertyMeta('og:image', `${window.location.origin}/HarryOmLogo.png`);
+    setPropertyMeta('og:image', `${window.location.origin}/harryyOmLogo.png`);
 
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', seo.title);
     setMeta('twitter:description', seo.description);
-    setMeta('twitter:image', `${window.location.origin}/HarryOmLogo.png`);
+    setMeta('twitter:image', `${window.location.origin}/harryyOmLogo.png`);
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {

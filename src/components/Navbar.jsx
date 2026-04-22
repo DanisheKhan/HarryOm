@@ -113,7 +113,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`py-4 px-4 md:px-8 w-full fixed top-0 z-50 transition-all duration-300 ${scrolled
+      className={`py-2 px-4 md:px-8 w-full fixed top-0 z-50 transition-all duration-300 ${scrolled
         ? 'bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-200/50'
         : 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-100'
         }`}
@@ -130,12 +130,12 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
           >
             <img
-              src="/HarryOmLogo.png"
+              src="/harryyOmLogo.png"
               alt="Harryy Om Logo"
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="w-11 h-11 transition-transform duration-300"
+              className="w-14 h-14 transition-transform duration-300"
             />
           </motion.div>
         </Link>
