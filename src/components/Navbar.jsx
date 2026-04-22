@@ -126,16 +126,15 @@ const Navbar = () => {
         {/* Logo with enhanced animations */}
         <Link
           to="/"
-          className="flex items-center gap-3 group"
+          className="flex items-center group"
           onClick={() => window.scrollTo(0, 0)}
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-3"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <img
               src="/harryyOmLogo.png"
@@ -143,14 +142,8 @@ const Navbar = () => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300"
+              className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300"
             />
-            <span className={`text-xl md:text-2xl font-bold font-[Playfair_Display] transition-colors duration-300 ${!scrolled && isHomePage
-              ? 'text-white'
-              : 'bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent'
-              }`}>
-              Harryy Om
-            </span>
           </motion.div>
         </Link>
 
