@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[88svh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/HarmeetImages/img6.jpg"
@@ -40,13 +40,13 @@ const HomePage = () => {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover object-center scale-100"
-            style={{ objectPosition: 'center 5%' }}
+            className="w-full h-full object-cover scale-110"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto py-16 md:py-20 mt-2 md:mt-6">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto py-20 md:py-24 pt-[5.5rem] md:pt-[6rem]">
           <motion.div
             className="mb-10 md:mb-12"
             initial="hidden"
@@ -253,7 +253,7 @@ const HomePage = () => {
           >
             <Link
               to="/soul-guide"
-              className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+              className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full py-4 px-8 transition-all duration-500 hover:scale-105 transform border border-sky-500/20"
             >
               Explore the Soul Guide
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -398,7 +398,7 @@ const HomePage = () => {
               />
               <button
                 type="submit"
-                className="bg-white hover:bg-gray-100 text-sky-600 font-bold rounded-full py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
+                className="bg-white hover:bg-gray-100 text-sky-600 font-bold rounded-full py-4 px-8 transition-all duration-500 hover:scale-105 transform whitespace-nowrap"
               >
                 Subscribe
               </button>

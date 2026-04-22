@@ -63,7 +63,7 @@ const SoulGuidePage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[62svh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[62svh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50 pt-[4.5rem] md:pt-[4.75rem]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>

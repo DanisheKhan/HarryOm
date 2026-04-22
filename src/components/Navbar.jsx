@@ -94,6 +94,8 @@ const MobileNavLink = ({ to, onClick, children }) => {
 };
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -115,19 +117,22 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`py-2 px-4 md:px-8 w-full fixed top-0 z-50 transition-all duration-300 ${scrolled
         ? 'bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-200/50'
-        : 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-100'
+        : isHomePage
+          ? 'bg-transparent border-transparent'
+          : 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-100'
         }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo with enhanced animations */}
         <Link
           to="/"
-          className="flex items-center group"
+          className="flex items-center gap-3 group"
           onClick={() => window.scrollTo(0, 0)}
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3"
           >
             <img
               src="/harryyOmLogo.png"
@@ -135,8 +140,14 @@ const Navbar = () => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="w-14 h-14 transition-transform duration-300"
+              className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300"
             />
+            <span className={`text-xl md:text-2xl font-bold font-[Playfair_Display] transition-colors duration-300 ${!scrolled && isHomePage
+              ? 'text-white'
+              : 'bg-gradient-to-r from-gray-900 via-sky-800 to-purple-800 bg-clip-text text-transparent'
+              }`}>
+              Harryy Om
+            </span>
           </motion.div>
         </Link>
 
@@ -149,7 +160,12 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <NavLink to={link.path}>{link.label}</NavLink>
+              <NavLink
+                to={link.path}
+                className={!scrolled && isHomePage ? 'text-white/90 hover:text-white' : ''}
+              >
+                {link.label}
+              </NavLink>
             </motion.div>
           ))}
           <motion.div
@@ -162,12 +178,19 @@ const Navbar = () => {
             <Link
               to="/connect"
               onClick={() => window.scrollTo(0, 0)}
-              className="bg-gradient-to-r from-sky-500 via-sky-600 to-purple-600 hover:from-sky-600 hover:via-purple-600 hover:to-pink-600 text-white py-2.5 px-7 rounded-full shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 flex items-center gap-2 font-medium"
+              className="bg-gradient-to-r from-sky-500 via-sky-600 to-purple-600 text-white py-2.5 px-8 rounded-full transition-all duration-500 flex items-center gap-2 font-medium border border-white/10 hover:brightness-110"
             >
               Connect
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <motion.svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                whileHover={{ x: 3 }}
+                transition={{ duration: 0.3 }}
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              </motion.svg>
             </Link>
           </motion.div>
         </div>
@@ -176,7 +199,10 @@ const Navbar = () => {
         <div className="md:hidden">
           <motion.button
             onClick={toggleMenu}
-            className="text-gray-800 focus:outline-none hover:text-sky-600 transition-colors p-2.5 rounded-xl hover:bg-gradient-to-r hover:from-sky-50 hover:to-purple-50"
+            className={`focus:outline-none transition-colors p-2.5 rounded-xl ${!scrolled && isHomePage
+              ? 'text-white hover:bg-white/10'
+              : 'text-gray-800 hover:text-sky-600 hover:bg-gradient-to-r hover:from-sky-50 hover:to-purple-50'
+              }`}
             aria-expanded={isOpen}
             aria-label="Toggle navigation menu"
             whileTap={{ scale: 0.9 }}
@@ -259,7 +285,7 @@ const Navbar = () => {
                 >
                   <Link
                     to="/connect"
-                    className="block bg-gradient-to-r from-sky-500 via-sky-600 to-purple-600 hover:from-sky-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3.5 px-5 rounded-xl transition-all duration-300 text-center shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-purple-500/40 mt-3"
+                    className="block bg-gradient-to-r from-sky-500 via-sky-600 to-purple-600 text-white font-semibold py-3.5 px-5 rounded-xl transition-all duration-500 text-center mt-3 border border-white/10 hover:brightness-110"
                     onClick={() => {
                       window.scrollTo(0, 0);
                       closeMenu();

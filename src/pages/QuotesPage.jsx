@@ -107,7 +107,7 @@ const QuotesPage = () => {
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[50svh] md:h-[55vh] flex items-center justify-center overflow-hidden bg-gray-50">
+      <section className="relative min-h-[50svh] md:h-[55vh] flex items-center justify-center overflow-hidden bg-gray-50 pt-[4.5rem] md:pt-[4.75rem]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-white/5"></div>
         </div>
