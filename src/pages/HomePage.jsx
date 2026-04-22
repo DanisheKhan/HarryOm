@@ -21,11 +21,12 @@ const HomePage = () => {
   };
 
   const scaleIn = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0.95, y: 10 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
+      y: 0,
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }
     }
   };
 
@@ -34,13 +35,16 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <motion.img
             src="/HarmeetImages/img6.jpg"
             alt="Peaceful meditation background"
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover scale-110"
+            initial={{ scale: 1.25, opacity: 0 }}
+            animate={{ scale: 1.1, opacity: 1 }}
+            transition={{ duration: 1.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="w-full h-full object-cover"
             style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>

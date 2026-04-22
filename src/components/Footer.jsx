@@ -12,7 +12,13 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-96 h-96 bg-sky-100/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <motion.div
+        className="relative max-w-7xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="inline-flex items-center space-x-3 group mb-6">
@@ -159,7 +165,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
