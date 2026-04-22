@@ -60,11 +60,11 @@ const QuotesPage = () => {
   ];
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }
     }
   };
 
@@ -79,13 +79,13 @@ const QuotesPage = () => {
   };
 
   const quoteVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: [0.4, 0, 0.2, 1]
+        duration: 0.8,
+        ease: [0.21, 0.47, 0.32, 0.98]
       }
     }
   };

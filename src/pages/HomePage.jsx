@@ -3,20 +3,20 @@ import { motion } from 'framer-motion';
 
 const HomePage = () => {
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }
     }
   };
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 25 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" }
+      transition: { duration: 0.9, ease: [0.21, 0.47, 0.32, 0.98] }
     }
   };
 
@@ -119,7 +119,7 @@ const HomePage = () => {
               className="w-full md:w-1/2"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-20px" }}
               variants={fadeInUp}
             >
               <div className="relative">
@@ -137,7 +137,7 @@ const HomePage = () => {
               className="w-full md:w-1/2"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-20px" }}
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
